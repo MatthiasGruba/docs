@@ -3,7 +3,7 @@
   "theme": "mint",
   "name": "Fonio API Documentation",
   "colors": {
-    "primary": "#585dfe",
+    "primary": "#585DFE",
     "light": "#07C983",
     "dark": "#15803D"
   },
