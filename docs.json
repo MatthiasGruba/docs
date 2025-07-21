@@ -21,6 +21,16 @@
             ]
           },
           {
+            "group": "Verhalten",
+            "pages": [
+              "Verhalten/SpracheStimme",
+              "Verhalten/Startnachricht",
+              "Verhalten/Prompt",
+              "Verhalten/Telefonnummer",
+              "Verhalten/Wissensdatenbank"
+            ]
+          },
+          {
             "group": "Essentials",
             "pages": [
               "essentials/markdown",
