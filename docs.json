@@ -16,8 +16,8 @@
           {
             "group": "Getting Started",
             "pages": [
-              "Introduction",
-              "fonio Quickstart"
+              "Introduction/Introduction",
+              "Introduction/fonio-Quickstart"
             ]
           },
           {
