@@ -68,13 +68,13 @@
       "anchors": [
         {
           "anchor": "fonio.ai",
-          "href": "https://mintlify.com/docs",
+          "href": "https://www.fonio.ai/",
           "icon": "phone"
         },
         {
           "anchor": "fonio Plattform",
           "href": "https://app.fonio.ai/",
-          "icon": "phone-square"
+          "icon": "desktop"
         },
         {
           "anchor": "Blog",
