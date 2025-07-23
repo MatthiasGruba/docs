@@ -1,158 +1,638 @@
 ---
 title: "Häufige Fragen - FAQ"
-description: "Hier findest du Antworten auf die am häufigsten gestellten Fragen. Du findest die Antwort zu deiner Frage nicht? Schreibe und gerne an support@fonio.ai"
+description: "Hier findest du Antworten auf die am häufigsten gestellten Fragen. Du findest die Antwort zu deiner Frage nicht? Schreibe uns gerne an support@fonio.ai"
 ---
+
+import test from '/snippets/path/to/test.mdx';
+
+import faq_1_telefonnummern from '/snippets/path/to/faq_1_telefonnummern.mdx'
 
 ## 1. Rufnummern & Telefonnummern
 
 <Accordion title="Kann ich meine eigene Telefonnummer mitnehmen oder eigene (deutsche oder österreichische) Nummern kaufen?">
-Eine klassische Rufnummern-Portierung ist aktuell noch nicht möglich, aber wir arbeiten bereits daran. Du kannst dir jederzeit bei uns eine deutsche oder österreichische Nummer kaufen oder eine individuelle Nummer mit Wunschvorwahl beantragen (mit lokalem Anschluss und Handelsregisterauszug, einmalig 50 €, Bearbeitung ca. 2–3 Werktage). Viele Nutzer leiten einfach ihre bestehende Nummer auf die KI-Nummer weiter – für die meisten Anwendungsfälle reicht das völlig aus.
+  Eine klassische Rufnummern-Portierung ist aktuell noch nicht möglich, aber wir arbeiten bereits daran. Du kannst dir jederzeit bei uns eine deutsche oder österreichische Nummer kaufen oder eine individuelle Nummer mit Wunschvorwahl beantragen (mit lokalem Anschluss und Handelsregisterauszug, einmalig 50 €, Bearbeitung ca. 2–3 Werktage). Viele Nutzer leiten einfach ihre bestehende Nummer auf die KI-Nummer weiter – für die meisten Anwendungsfälle reicht das völlig aus.
 
-Du kannst deine Nummer bei fonio über SIP integrieren. So kannst du auch deine eigenen Nummer mitbringen, und in fonio nutzen. Das Feature findest du unter “Telefonnummern” bei “Nummer hinzufügen” und “SIP Nummer erstellen”
+  Du kannst deine Nummer bei fonio über SIP integrieren. So kannst du auch deine eigene Nummer mitbringen und in fonio nutzen. Das Feature findest du unter “Telefonnummern” bei “Nummer hinzufügen” und “SIP Nummer erstellen”.
 </Accordion>
 
-<Accordion title="Brauche ich eine eigene Nummer, oder reicht die Weiterleitung?">
-In den meisten Fällen reicht eine Rufweiterleitung völlig aus. Deine Kunden sehen weiter deine „echte“ Nummer. Eigene Nummern sind nur in Spezialfällen nötig – die kannst du aber jederzeit dazubuchen.
+<Accordion title="Kann ich meine eigenen VOIP-Rufnummern verwenden?">
+  Ja, du kannst deine eigenen VOIP-Rufnummern verwenden, und zwar über SIP. Das Feature findest du unter “Telefonnummern” \> “Nummer hinzufügen” \> “SIP Nummer erstellen”.
 </Accordion>
 
 <Accordion title="Kann ich lokale Rufnummern in meine Telefonanlage integrieren (z. B. via SIP-Trunk)?">
-Ja, dieses Feature ist bereits in Arbeit bzw. teilweise verfügbar. Du kannst Fonio dann als eigene Nebenstelle in deine Telefonanlage einbinden – das ist besonders praktisch für größere Unternehmen. Das Feature findest du unter “Telefonnummern” bei “Nummer hinzufügen” und “SIP Nummer erstellen”
+  Ja, dieses Feature ist bereits in Arbeit bzw. teilweise verfügbar. Du kannst Fonio dann als eigene Nebenstelle in deine Telefonanlage einbinden – das ist besonders praktisch für größere Unternehmen.
+</Accordion>
+
+<Accordion title="Kann ich eigene Telefonnummern einbinden oder eine spezielle Vorwahlnummer wählen?">
+  Ja, du kannst individuelle Vorwahlen anfordern, die zu deinem Unternehmenssitz passen. Du erhältst jedoch eine Vorwahl, die dem Sitz deines Unternehmens entspricht. Bei individuellen Nummern mit Wunschvorwahl benötigen wir einen Handelsregisterauszug.
+</Accordion>
+
+<Accordion title="Welche Vorwahl hat eine Rufnummer, die ich über euch kaufe?">
+  Die Standardvorwahl für eine Rufnummer aus Deutschland ist \+49 30 (Berlin) und aus Österreich \+43 720. Für individuelle Nummern einfach anfragen\!
+</Accordion>
+
+<Accordion title="Brauche ich eine eigene Nummer, oder reicht die Weiterleitung?">
+  In den meisten Fällen reicht eine Rufweiterleitung völlig aus. Deine Kunden sehen weiter deine „echte“ Nummer. Eigene Nummern sind nur in Spezialfällen nötig – die kannst du aber jederzeit dazubuchen.
+</Accordion>
+
+<Accordion title="Kann ich eine Rufnummer mit einer frei wählbaren deutschen Vorwahl kaufen?">
+  Ja, du kannst individuelle Rufnummern anfragen. Die Vorwahl entspricht dem Sitz deines Unternehmens.
+</Accordion>
+
+<Accordion title="Kann ich auch eine eigene Telefonnummer verwenden?">
+  Ja, du kannst deine eigene Telefonnummer über SIP anbinden, falls das für dich eine Option ist.
+</Accordion>
+
+<Accordion title="Kann ich meine Telefonnummer frei wählen oder eine bereits genutzte Nummer verwenden?">
+  Ja, du kannst eine bestehende Telefonnummer über SIP einbinden, wenn das möglich ist.
+</Accordion>
+
+<Accordion title="Wie erhalte ich die Nummer des anrufenden Teilnehmers bei der Verwendung einer anderen Hauptnummer?">
+  Um die Rufnummer des anrufenden Teilnehmers zu erhalten, solltest du die Einstellungen in der Telefonanlage (z. B. 3CX) anpassen, bevor der Anruf an Fonio weitergeleitet wird. So bleibt die ursprüngliche Rufnummer erhalten.
+</Accordion>
+
+<Accordion title="Wie sende ich die Telefonnummer des Anrufers mit der API weiter?">
+  Gib die Telefonnummer als Variable "fromNumber" über die API weiter.
 </Accordion>
 
 <Accordion title="Kann ich die angezeigte Rufnummer bei einer Weiterleitung steuern?">
-Ja, in den meisten Telefonanlagen kannst du einstellen, ob die Nummer des Anrufers oder die der Telefonanlage weitergegeben werden soll. Kontaktiere dafür am besten den Anbieter deiner Telefonanlage, falls du Support brauchst.
+  Ja, in den meisten Telefonanlagen kannst du einstellen, ob die Nummer des Anrufers oder die der Telefonanlage weitergegeben werden soll. Kontaktiere deinen Telefonanlagenanbieter, falls du Unterstützung brauchst.
+</Accordion>
+
+<Accordion title="Kann ich der KI ein internes Telefonbuch mit Namen und Rufnummer geben, um Anrufe intern weiterzuleiten?">
+  Ja, das ist möglich\! Du kannst die freie Rufweiterleitung nutzen, um Anrufe intern weiterzuleiten.
+</Accordion>
+
+<Accordion title="Kann ich eine Schweizer Nummer kaufen?">
+  Eine Schweizer Nummer ist derzeit nur auf Anfrage erhältlich, füll dafür bitte das Formular direkt in der Plattform aus.
+</Accordion>
+
+<Accordion title="Brauche ich einen Nachweis für gekaufte Nummern?">
+  Für Standardnummern nicht, aber für individuelle Nummern mit Wunschvorwahl benötigen wir einen Handelsregisterauszug.
+</Accordion>
+
+<Accordion title="Fallen monatliche Kosten für die Telefonnummer an?">
+  Ja, für die Telefonnummer fallen monatliche Kosten von 9 € an.
+</Accordion>
+
+<Accordion title="Leitet die KI wichtige Gespräche an mich weiter, wenn ich meine Rufnummer standardmäßig an sie weiterleite?">
+  Ja, das funktioniert\! Allerdings kann es in einigen Fällen zu einer Schleife kommen, in der die Gespräche ständig zwischen der KI und deinem Telefon hin und her geleitet werden.
+</Accordion>
+
+<Accordion title="Woher erhält das System die Handynummer, wenn jemand von einer Festnetznummer anruft?">
+  Die SMS wird immer an die anrufende Nummer gesendet. Du kannst aber einstellen, dass die SMS an eine andere, bestimmte Nummer weitergeleitet wird.
+</Accordion>
+
+<Accordion title="Kann ich Folio als Nebenstelle anbinden, um Kosten für Weiterleitungen zu sparen?">
+  Ja, du kannst Folio per SIP anbinden, falls dies möglich ist.
 </Accordion>
 
 ## 2. Anrufweiterleitung & Assistenten
 
 <Accordion title="Kann die KI Anrufe weiterleiten?">
-Ja! Du kannst im Prompt genau festlegen, **wann** und **wohin** weitergeleitet werden soll. Damit das auch technisch möglich ist, musst du im Bereich **Tools → Weiterleitung** diese Weiterleitungen anlegen – die KI übernimmt dann automatisch.
+  Ja\! Du kannst im Prompt genau festlegen, **wann** und **wohin** weitergeleitet werden soll. Im Bereich **Tools → Weiterleitung** legst du die Ziele an – die KI übernimmt dann automatisch.
 </Accordion>
 
 <Accordion title="Kann ich mehrere Assistenten anlegen?">
-Ja, du kannst beliebig viele Assistenten erstellen. Die meisten arbeiten mit 1–3 Assistenten, aber es gibt keine Begrenzung. Für das Anlegen von Assistenten entstehen keine Kosten.
+  Ja, du kannst beliebig viele Assistenten erstellen. Die meisten arbeiten mit 1–3 Assistenten, aber es gibt keine Begrenzung. Für das Anlegen von Assistenten entstehen keine Kosten.
+</Accordion>
+
+<Accordion title="Kann ich Assistenten kopieren und die Vorlagen anpassen?">
+  Das steht auf unserer Wunschliste und wird bald umgesetzt\! Du kannst Tools und Assistenten bald duplizieren.
+</Accordion>
+
+<Accordion title="Wie kann ich die mehrsprachigen Assistenten nutzen?">
+  Um mit den mehrsprachigen Assistenten zu sprechen, kannst du direkt im Gespräch anfragen, in welche Sprache du wechseln möchtest (z. B. „Können wir jetzt auf Englisch weitersprechen?“). Stelle sicher, dass der Assistent Sprachwechsel unterstützt.
+</Accordion>
+
+<Accordion title="Was passiert mit der Aufzeichnung, wenn der Anrufer nicht möchte, dass sein Anruf aufgezeichnet wird?">
+  Wenn der Anrufer nicht möchte, dass der Anruf aufgezeichnet wird, kannst du ihn an eine festgelegte Rufnummer weiterleiten. In diesem Fall endet die Aufzeichnung mit Beginn der Weiterleitung.
+</Accordion>
+
+<Accordion title="Kann ich eine direkte Rufweiterleitung einstellen?">
+  Leider ist das aktuell nicht möglich, aber eine solche Funktion ist in Planung und wird bald verfügbar sein.
+</Accordion>
+
+<Accordion title="Sind die mehrsprachigen Assistenten Anna, Sophie, Ben und Brian automatisch mehrsprachig?">
+  Nein, sie sind nicht automatisch mehrsprachig. Du musst die mehrsprachige Option aktiv auswählen, das ist wichtig.
+</Accordion>
+
+<Accordion title="Was passiert, wenn bei einem Outbound-Anruf die Mailbox des Kunden antwortet?">
+  In diesem Fall erkennt unser System die Mailbox automatisch.
+</Accordion>
+
+<Accordion title="Kann die KI parallel mehrere Telefonate führen?">
+  Ja, die KI kann mehrere Telefonate gleichzeitig führen. Der KI-Agent kann bis zu 15 Anrufe gleichzeitig abdecken. Wenn mehr als 15 Leute anrufen, werden zusätzliche Anrufe in eine Warteschlange gestellt.
+</Accordion>
+
+<Accordion title="Kann ich Anrufe zurück an die Zentrale weiterleiten, wenn der Anrufer nicht mit der KI sprechen möchte?">
+  Ja, das ist möglich.
+</Accordion>
+
+<Accordion title="Kann man von einem zum anderen Assistenten übergeben?">
+  Ja, das ist möglich\! Nutze einfach die Weiterleitung, um zu einem anderen Assistenten zu wechseln.
+</Accordion>
+
+<Accordion title="Kann ich per API den Assistenten für ausgehende Anrufe auswählen?">
+  Ja, du kannst den Assistenten für ausgehende Anrufe über die "fromNumber"-Einstellung auswählen. Das lässt sich sogar dynamisch gestalten.
+</Accordion>
+
+<Accordion title="Kann Fonio direkt einen Outbound Call durchführen?">
+  Ja, das ist möglich\! Fonio kann Leads, die sich über ein Kontaktformular eintragen, anrufen, qualifizieren und einen Termin vereinbaren.
+</Accordion>
+
+<Accordion title="Warum sollte ich mehrere Assistenten erstellen?">
+  Wenn du unterschiedliche Anwendungsfälle hast, die sich nicht überschneiden, kann es sinnvoll sein, mehrere Assistenten zu erstellen. Zum Beispiel: Wenn dein Unternehmen zwei völlig verschiedene Geschäftsbereiche hat, hilft es, die Assistenten getrennt zu halten, um die Übersichtlichkeit zu wahren.
+</Accordion>
+
+<Accordion title="Wie wird die Weiterleitung abgerechnet?">
+  Für aktive Weiterleitungen berechnen wir nur 6 Cent pro Minute.
+</Accordion>
+
+<Accordion title="Kann ich im Prompt festlegen, nach wie vielen Klingeltönen der Anruf zurückgeholt wird, wenn die gewünschte Person nicht abhebt?">
+  Das ist derzeit nicht möglich. Es sind 30 Sekunden vorgegeben.
+</Accordion>
+
+<Accordion title="Wartest du bei einer Rufweiterleitung, bis der Teilnehmer abhebt?">
+  Ja, die KI wartet derzeit 30 Sekunden, bevor sie den Anrufer zurückholt.
+</Accordion>
+
+<Accordion title="Wie kann ich das Problem mit der Rufweiterleitung lösen, sodass die Nummer des Anrufers angezeigt wird?">
+  Das musst du in deiner Telefonanlage einstellen. Überprüfe die Einstellungen zur Rufweiterleitung, um sicherzustellen, dass die Anrufernummer weitergeleitet wird.
+</Accordion>
+
+<Accordion title="Kann ich der KI sagen, dass sie die Rufumleitung nur während der Öffnungszeiten durchführen soll?">
+  Ja, das ist möglich\! Du kannst der KI mitteilen, dass die Rufumleitung nur während der Öffnungszeiten erfolgen soll.
+</Accordion>
+
+<Accordion title="Kann ich Anrufer automatisch abweisen, wenn sie Probleme haben?">
+  Ja, das ist möglich\! Du kannst eine Funktion nutzen, die Anrufer automatisch abweist und sie bei Schwierigkeiten an einen Mitarbeiter weiterleitet.
+</Accordion>
+
+<Accordion title="Kann Fonio in einem Callcenter eingesetzt werden, um nach längerer Wartezeit zu aktivieren?">
+  Ja, das ist möglich\! Fonio kann eingerichtet werden, um die Aktivierung erst nach einer bestimmten Wartezeit zu starten.
+</Accordion>
+
+<Accordion title="Erkennt die KI bei Outbound-Anrufen, wenn sie auf einen Anrufbeantworter landet?">
+  Ja, die KI erkennt das und legt dann auf.
+</Accordion>
+
+<Accordion title="Kostet jeder Assistent extra und habe ich für jeden Assistenten eine eigene Rufnummer?">
+  Du kannst die Assistenten kostenlos nutzen\! Rufnummern hingegen kosten 9 € pro Monat.
+</Accordion>
+
+<Accordion title="Wie viele Anrufe kann der KI-Agent gleichzeitig abdecken? Was passiert, wenn 10–20 Leute gleichzeitig anrufen?">
+  Der KI-Agent kann bis zu 15 Anrufe gleichzeitig abdecken. Wenn mehr als 15 Leute anrufen, werden zusätzliche Anrufe in eine Warteschlange gestellt.
 </Accordion>
 
 ## 3. Sprachen, Stimmen & Dialekt
 
 <Accordion title="Kann die KI mehrere Sprachen oder auch Dialekt sprechen?">
-Ja, Fonio unterstützt viele Sprachen. Im Multilingual-Modus kann sogar während des Gesprächs automatisch zwischen acht Sprachen gewechselt werden. Für bestimmte Dialekte oder spezielle Sprachmodi bieten wir verschiedene Stimmen an. Ganz ausgefallene Dialekte gehen (noch) nicht, aber im Prompt kannst du die Aussprache anpassen.
+  Ja, Fonio unterstützt viele Sprachen. Im Multilingual-Modus kann sogar während des Gesprächs automatisch zwischen acht Sprachen gewechselt werden. Für bestimmte Dialekte oder spezielle Sprachmodi bieten wir verschiedene Stimmen an.
 </Accordion>
 
 <Accordion title="Was kostet es, wenn die KI zusätzliche Sprachen oder Stimmen nutzt?">
-Alle verfügbaren Sprachen sind immer inkludiert, es entstehen keine Zusatzkosten.
+  Alle verfügbaren Sprachen sind immer inkludiert, es entstehen keine Zusatzkosten.
+</Accordion>
+
+<Accordion title="Wie schnell sind die Reaktionszeiten bei Text zu Sprache und Sprache zu Text?">
+  Unsere Reaktionszeiten liegen in der Regel bei etwa einer Sekunde oder knapp darunter, abhängig von der Serverauslastung.
+</Accordion>
+
+<Accordion title="Habt ihr eigene STT/TTS?">
+  Wir verwenden die besten verfügbaren STT- und TTS-Technologien, die wir jederzeit leicht austauschen können.
+</Accordion>
+
+<Accordion title="Ist die Stimme von Maria DSGVO-konform? Wie erkenne ich, welche Stimmen konform sind?">
+  Das hängt vom Anbieter der Stimme ab. Aktuell sind die Stimmen von Elevenlabs noch nicht DSGVO-konform, während die Stimmen von Azure in Europa bereits vollständig konform sind.
+</Accordion>
+
+<Accordion title="Hat das Zeichen '#' im Prompt eine besondere Bedeutung?">
+  Ja, das Zeichen "#" wird im Markdown-Format verwendet, um Überschriften zu erstellen.
+</Accordion>
+
+<Accordion title="Ist es besser, komplexe Abläufe in natürlicher Sprache oder mit Mermaid-Charts zu formulieren?">
+  Für komplexe Abläufe kann es hilfreich sein, beide Ansätze zu nutzen. Natürliche Sprache eignet sich gut für Erklärungen, während Mermaid-Charts eine visuelle Darstellung bieten.
+</Accordion>
+
+<Accordion title="Kann Fonio im Gespräch die Sprache wechseln, wenn mein Gegenüber auf Englisch sprechen möchte?">
+  Ja, Fonio kann die Sprache wechseln, falls dein Gesprächspartner auf Englisch umschalten möchte.
+</Accordion>
+
+<Accordion title="Kann ich im Prompt alle Sprachen auflisten lassen?">
+  Ja, das ist möglich\!
 </Accordion>
 
 ## 4. Integrationen, API & Automatisierung
 
 <Accordion title="Kann ich Fonio mit anderen Systemen wie CRM, Online-Shops oder Tools verbinden? Kann die KI auf APIs zugreifen?">
-Ja! Fonio bietet eine offene API, mit der du fast jedes System anbinden kannst – z. B. CRM, ERP, Kalender, Ticketsysteme, Automatisierungstools wie Make, n8n oder Zapier. Die KI kann während oder nach dem Gespräch auf diese Systeme zugreifen. Eigene Integrationen baust du am einfachsten mit einer API oder über eines der genannten Tools.
+  Ja\! Fonio bietet eine offene API, mit der du fast jedes System anbinden kannst – z. B. CRM, ERP, Kalender, Ticketsysteme, Automatisierungstools wie Make, n8n oder Zapier.
 </Accordion>
 
-<Accordion title="Können Transkripte automatisch an andere Systeme geschickt werden (z. B. per E-Mail, API oder WhatsApp)?">
-Ja, Transkripte können per E-Mail oder API an jedes System geschickt werden. Über Automatisierungstools kannst du die Inhalte sogar per WhatsApp versenden oder individuell zusammenfassen lassen. Alle Infos. dazu findest du unter “Nachverarbeitung”
+<Accordion title="Wie integriere ich meine Webseite in die KI, um Informationen zu nutzen? Muss ich PDFs erstellen?">
+  Du kannst deine Webseite über das Tool 'Websuche' einbinden, indem du einfach die Domain eingibst. PDFs sind nicht notwendig, wenn du die Informationen von deiner Seite verfügbar machen möchtest.
+</Accordion>
+
+<Accordion title="Wo finde ich die SIP Anbindung?">
+  Du findest die SIP Anbindung im Reiter „Rufnummern“. Einfach dort draufklicken\!
+</Accordion>
+
+<Accordion title="Wie erstelle ich eine persönliche Ansprache mit Webhook-Daten?">
+  Das kannst du im Startprompt umsetzen. Du kannst individuelle Variablen definieren und Fallback-Optionen festlegen, falls Vorname oder Nachname leer sind.
+</Accordion>
+
+<Accordion title="Funktioniert die Kalenderfunktion auch mit anderen Tools wie Bookings?">
+  Momentan funktioniert die Kalenderfunktion nativ nur mit cal.com. Für andere Tools, wie Bookings, ist die Integration über die API möglich, falls unterstützt.
+</Accordion>
+
+<Accordion title="Welche Automation-Software wird empfohlen?">
+  Wir empfehlen n8n als Automation-Software.
+</Accordion>
+
+<Accordion title="Gibt es eine Quelle, um zu lernen, wie man die Schnittstellen einbindet?">
+  Ja, demnächst wird ein Video veröffentlicht, das genau das zeigt\!
+</Accordion>
+
+<Accordion title="Wie gebe ich die {{fromNumber}} an die API weiter?">
+  Du gibst die fromNumber im Body des API-Requests an.
+</Accordion>
+
+<Accordion title="Kann ich den Namen des Kontakts in die Startnachricht einbauen, wenn ich den Inbound Webhook nutze und das Ergebnis positiv ist?">
+  Ja, das kannst du\! Wenn der Inbound Webhook erfolgreich Kontaktinfos liefert, kannst du den Namen gerne in die Startnachricht einfügen.
+</Accordion>
+
+<Accordion title="Kann ich die Knowledgebase automatisiert aktualisieren?">
+  Ja, das geht mit n8n. Du kannst die Fonio API nutzen, um die Updates durchzuführen.
+</Accordion>
+
+<Accordion title="Gibt es eine Native Anbindung an HubSpot, und nutzt Ihr selbst auch HubSpot?">
+  Momentan haben wir keine native Anbindung an HubSpot. Allerdings kannst du HubSpot über Automatisierungen, wie zum Beispiel n8n, integrieren.
+</Accordion>
+
+<Accordion title="Was ist ein Pre Call Hook und wie integriere ich die Bestellhistorie des Anrufers in den Prompt?">
+  Ein Pre Call Hook hilft dir, vor dem Anruf wichtige Informationen zu sammeln und in den Gesprächsverlauf einzubringen. Um die Bestellhistorie des Anrufers einzubinden, kannst du z. B. im Prompt erwähnen: "Hallo, ich sehe, dass du zuletzt am [Datum] eine Bestellung von [Produkt] getätigt hast."
+</Accordion>
+
+<Accordion title="Hat die Wissensdatenbank eine API oder kann ich nur PDFs verwenden?">
+  Aktuell kannst du auf der fonio Plattform nur PDFs einbinden. Eine Wissensdatenbank könntest du außerhalb von fonio mit einer API-Anbindung erstellen.
+</Accordion>
+
+<Accordion title="Kann ich eigene Workflows, wie z. B. zur Angebotsgenerierung, einbinden? Kann der Agent das Angebot auch vorlesen?">
+  Ja, du kannst eigene Workflows für die Angebotsgenerierung einbinden. Der Agent wählt diese intelligent aus und kann das Angebot auch vorlesen.
+</Accordion>
+
+<Accordion title="Kann die KI beim Anbinden an CRM oder Warenwirtschaftssysteme den Lieferstatus einer Bestellung abfragen?">
+  Ja, das ist über eine API-Anbindung während des Calls möglich.
+</Accordion>
+
+<Accordion title="Kann ich eine Liste mit Namen und Nummern in der Wissensdatenbank hinterlegen, wenn mein CRM keine API hat?">
+  Ja, das ist technisch möglich. So kann die KI den Anrufer mit Namen ansprechen.
+</Accordion>
+
+<Accordion title="Kann ich beim Beispiel der Autovermietung auf eine Datenbank verweisen, die der KI-Assistent nutzen kann, um die aktuellen Modelle zu checken?">
+  Ja, das ist möglich\! Wenn das Autohaus die nötigen Systeme hat, kann eine API-Anbindung eingerichtet werden.
+</Accordion>
+
+<Accordion title="Unterstützt eure API Nachverarbeitung auch Authentifizierung?">
+  Ja, unsere API unterstützt die Authentifizierung bei der Nachverarbeitung.
+</Accordion>
+
+<Accordion title="Wie kann ich mich als Automations-/AI-Dienstleister als Partner bewerben?">
+  Du kannst dich einfach über unser Kontaktformular bewerben. Fülle alle erforderlichen Informationen aus und wir melden uns schnellstmöglich bei dir.
 </Accordion>
 
 ## 5. Terminvereinbarung & Kalender
 
 <Accordion title="Kann die KI Termine buchen oder auf Kalender zugreifen?">
-Ja, die KI kann eigenständig Termine über [**cal.com**](http://cal.com) oder per API vereinbaren und mit gängigen Kalendern wie Google, iCloud oder Outlook arbeiten. cal.com funktioniert sehr ähnlich wie calendly, was du bestimmt kennst: Du kannst deinen Kalender verknüpfen, und Termin-Typen erstellen, die dann zu gewissen Zeiten automatisch gebucht werden können.
+  Ja, die KI kann eigenständig Termine über [cal.com](http://cal.com) oder per API vereinbaren und mit gängigen Kalendern wie Google, iCloud oder Outlook arbeiten.
+</Accordion>
+
+<Accordion title="Brauche ich eine E-Mail für die Terminbuchung?">
+  Nein, du kannst auch deine Handynummer angeben. Die Bestätigung bekommst du dann per SMS.
+</Accordion>
+
+<Accordion title="Muss ich bei mehreren Kalendereinträgen auf cal.com auch mehrere Events in Tools erstellen? Und wie sollten die Beschreibungen aussehen?">
+  Ja, du solltest pro Typ von Kalenderevent ein eigenes Tool in Tools anlegen. Achte darauf, dass die Namen der Tools aussagekräftig sind.
+</Accordion>
+
+<Accordion title="Können die Öffnungszeiten für die Nutzung der KI festgelegt werden?">
+  Ja, das lässt sich umsetzen\! Du kannst festlegen, dass die KI außerhalb der Geschäftszeiten, z. B. von 18:00 bis 08:00 Uhr, arbeitet und während der Öffnungszeiten deine Mitarbeiter für Anfragen zuständig sind.
 </Accordion>
 
 ## 6. SMS, E-Mail & Nachverarbeitung
 
 <Accordion title="Kann die KI SMS oder E-Mails verschicken und Transkripte nach dem Gespräch bereitstellen?">
-Ja! Unter “Nachverarbeitung” kannst du einstellen, wann und an wen SMS oder E-Mails verschickt werden sollen. Die Inhalte und Empfänger lassen sich dynamisch im Prompt festlegen. Nach jedem Gespräch erhältst du ein Transkript, das du individuell zusammenfassen und weiterleiten lassen kannst. Die in der SMS und der E-Mail verwendeten Variablen lassen sich auch direkt im Betreff einfügen, falls du das möchtest.
+  Ja\! Unter “Nachverarbeitung” kannst du einstellen, wann und an wen SMS oder E-Mails verschickt werden sollen. Nach jedem Gespräch erhältst du ein Transkript.
+</Accordion>
+
+<Accordion title="Entstehen bei der Nutzung von SMS zusätzliche Kosten?">
+  Ja, es können zusätzliche Kosten entstehen. Diese werden transparent angegeben und liegen bei etwa 15 Cent pro SMS.
+</Accordion>
+
+<Accordion title="Bekommen wir die Aufzeichnung im Nachgang zugestellt?">
+  Ja, die Aufzeichnung wird nach der Veranstaltung an alle Teilnehmer:innen verschickt.
+</Accordion>
+
+<Accordion title="Kann ich Links aus der Nachbearbeitung auch für Nicht-Logins zugänglich machen?">
+  Momentan ist das leider nicht möglich. In Zukunft planen wir jedoch eine User-Verwaltung, die dies ermöglichen wird.
+</Accordion>
+
+<Accordion title="Wird die SMS über eine Fonio-Nummer verschickt oder muss ich eine eigene Nummer konfigurieren?">
+  Du musst keine eigene Nummer konfigurieren, das geschieht automatisch über Fonio.
+</Accordion>
+
+<Accordion title="Warum wird meine E-Mail-Adresse nicht richtig erkannt?">
+  Es kann hilfreich sein, im Prompt genauere Anweisungen zu geben, wie oft nachgefragt werden soll und was passieren soll, wenn nichts erkannt wird.
 </Accordion>
 
 ## 7. Internetrecherche & Wissensdatenbank
 
 <Accordion title="Kann die KI im Internet recherchieren oder auf Wissensdatenbanken zugreifen?">
-Ja, es gibt eine integrierte Suchfunktion, mit der die KI Live-Ergebnisse aus dem Internet holen kann. Diese findest du unter “Tools” und “Suchanfrage”. Für große Infomengen nutze aber besser die Wissensdatenbank, in die du PDFs hochladen kannst. Die KI nutzt diese automatisch als Quelle.
+  Ja, es gibt eine integrierte Suchfunktion, mit der die KI Live-Ergebnisse aus dem Internet holen kann. Für große Infomengen nutze aber besser die Wissensdatenbank, in die du PDFs hochladen kannst.
 </Accordion>
 
 <Accordion title="Wie viele Informationen kann ich ins Prompt oder in die Wissensdatenbank packen?">
-Das Prompt kann bis zu 100.000 Zeichen lang sein (ca. 20 A4-Seiten). Größere Infomengen oder Dokumente wie AGBs, Produktdatenblätter etc. lädst du am besten als PDF in die Wissensdatenbank.
+  Das Prompt kann bis zu 100.000 Zeichen lang sein (ca. 20 A4-Seiten). Größere Infomengen oder Dokumente wie AGBs, Produktdatenblätter etc. lädst du am besten als PDF in die Wissensdatenbank.
+</Accordion>
+
+<Accordion title="Ist das PDF als Wissensdatenbank schneller als eine Webseite?">
+  Ja, in der Regel ist ein PDF-Dokument schneller zu laden und bereitzustellen als eine Webseite, besonders wenn die Webseite viele Grafiken oder interaktive Elemente enthält.
+</Accordion>
+
+<Accordion title="Könnt ihr auch andere Formate wie Markup oder DOCX in der Wissensdatenbank speichern?">
+  Momentan unterstützen wir nur PDF-Dateien, aber wir arbeiten daran, die Möglichkeiten zu erweitern.
+</Accordion>
+
+<Accordion title="Ist fonio.ai für die Schweiz schon aktiv?">
+  Ja, fonio ist jetzt auch in der Schweiz aktiv – sogar mit Schweizer Stimmen\!
+</Accordion>
+
+<Accordion title="Welches LLM nutzt Fonio?">
+  Wir nutzen aktuell Modelle von OpenAI. Diese sind DSGVO-konform und können bei Bedarf einfach ausgetauscht werden.
+</Accordion>
+
+<Accordion title="Durchsucht die KI auch Unterseiten oder nur die angegebene Website?">
+  Die KI durchsucht die gesamte angegebene Domain, einschließlich aller Unterseiten.
+</Accordion>
+
+<Accordion title="Kann ich Infos über das Unternehmen als PDF in die Wissensdatenbank hochladen?">
+  Ja, das ist möglich\! Du kannst die Informationen als PDF in die Wissensdatenbank hochladen.
+</Accordion>
+
+<Accordion title="Gibt es eine Begrenzung für die Wissensdatenbank?">
+  Aktuell gibt es keine Begrenzung für die Wissensdatenbank. Wir haben bereits erfolgreich mit über 300 Seiten Dokumenten getestet.
+</Accordion>
+
+<Accordion title="Gibt es eine Aufzeichnung des fortgeschrittenen Teils des Webinars?">
+  Ja, die Aufzeichnung wird per E-Mail an alle Teilnehmer:innen verschickt.
 </Accordion>
 
 ## 8. Datenschutz, DSGVO & Compliance
 
 <Accordion title="Wie ist das mit Datenschutz, DSGVO und EU AI Act bei Fonio?">
-Wir speichern alle sensiblen Daten auf sicheren Servern in Deutschland (Hetzner, Nürnberg), komplett EU-konform. Zusatzdienste wie bestimmte Stimmenanbieter oder Tools können auf Wunsch auch Daten in die USA übertragen – das kannst du selbst steuern. Die KI läuft DSGVO-konform auf EU-Infrastruktur (Azure Schweden). Alle Datenschutzinfos findest du transparent auf unserer Website.
+  Wir speichern alle sensiblen Daten auf sicheren Servern in Deutschland (Hetzner, Nürnberg), komplett EU-konform. Zusatzdienste wie bestimmte Stimmenanbieter oder Tools können auf Wunsch auch Daten in die USA übertragen – das kannst du selbst steuern.
 </Accordion>
 
 <Accordion title="Muss die KI am Telefon sagen, dass sie eine KI ist und der Anruf aufgezeichnet wird?">
-Ja! Das ist nach DSGVO und EU AI Act Pflicht. Die KI stellt sich immer als KI vor und weist auf die Aufzeichnung bzw. Transkription hin. Der Anrufer kann dann entscheiden, ob er das möchte – wenn nicht, wird das Transkript automatisch gelöscht.
+  Ja\! Das ist nach DSGVO und EU AI Act Pflicht. Die KI stellt sich immer als KI vor und weist auf die Aufzeichnung bzw. Transkription hin. Der Anrufer kann dann entscheiden, ob er das möchte – wenn nicht, wird das Transkript automatisch gelöscht.
 </Accordion>
 
 <Accordion title="Reicht „Ich bin die virtuelle Assistenz von Firma XY“ als Hinweis?">
-Das Thema ist juristisch noch neu. Wichtig ist, dass klar wird, dass es sich um eine KI handelt. Die meisten Kunden erwarten so Transparenz und Verständnis, falls es mal einen Fehler gibt. Wichtig: Wir können hier keine entgültigen rechtlichen Rat geben.
+  Das Thema ist juristisch noch neu. Wichtig ist, dass klar wird, dass es sich um eine KI handelt. Die meisten Kunden erwarten so Transparenz und Verständnis, falls es mal einen Fehler gibt.
+</Accordion>
+
+<Accordion title="Sollte ich am Anfang des Anrufs das Einverständnis des Anrufers zum Datenschutz einholen?">
+  Ja, das ist empfehlenswert. Es sorgt für Transparenz und Vertrauen.
+</Accordion>
+
+<Accordion title="Wie lange bleibt das Transkript im System?">
+  Das Transkript bleibt bis zu 30 Tage im System vorhanden.
+</Accordion>
+
+<Accordion title="Wo werden die Dokumente verarbeitet und gespeichert?">
+  Ja, die Dokumente werden auch in Europa verarbeitet und gespeichert.
+</Accordion>
+
+<Accordion title="Gibt es eine Standardvorlage für die AVV?">
+  Ja, unser AVV ist Teil der AGB und dort einsehbar.
 </Accordion>
 
 ## 9. Namen, Daten & Variablen
 
 <Accordion title="Erkennt die KI immer alle Namen, Adressen oder Daten richtig? Was tun bei Fehlern?">
-Die KI gibt sich Mühe, aber bei ungewöhnlichen Namen, Adressen oder Schreibweisen kann es zu Fehlern kommen. Lass dir im Zweifel Namen buchstabieren und aktiviere in den Einstellungen die genaue Informations­erfassung unter “Technisches” mit Beispielen. Fehler bei Zahlen kannst du vermeiden, indem du Zahlen zusätzlich ausgeschrieben im Prompt anführst (z. B. „150 (einhundertfünfzig)“). Bei Fehlern kannst du uns gerne Beispiele schicken (support@fonio.ai) – wir verbessern laufend.
+  Die KI gibt sich Mühe, aber bei ungewöhnlichen Namen, Adressen oder Schreibweisen kann es zu Fehlern kommen. Lass dir im Zweifel Namen buchstabieren und aktiviere in den Einstellungen die genaue Informations­erfassung unter “Technisches” mit Beispielen. Fehler bei Zahlen kannst du vermeiden, indem du Zahlen zusätzlich ausgeschrieben im Prompt anführst (z. B. „150 (einhundertfünfzig)“).
 </Accordion>
 
 <Accordion title="Was passiert, wenn beim Prompt eine Variable aus dem Inbound Webhook wie der Vorname fehlt?">
-Du kannst in dem Inbound Webhook Tool immer einen Standardtext (Fallback) angeben, z.B. „Hallo, schön dich kennenzulernen“. So klingt die Ansprache immer freundlich – auch wenn mal eine Information fehlt.
+  Du kannst in dem Inbound Webhook Tool immer einen Standardtext (Fallback) angeben, z. B. „Hallo, schön dich kennenzulernen“. So klingt die Ansprache immer freundlich – auch wenn mal eine Information fehlt.
+</Accordion>
+
+<Accordion title="Wie kann ich die Erkennung von Namen verbessern?">
+  Um die Erkennung von Namen zu optimieren, kannst du eine Liste der Namen im Prompt einfügen.
+</Accordion>
+
+<Accordion title="Kann ich eine Adresse mit Hausnummer, Stiege, Stock und Tür eingeben?">
+  Ja, das funktioniert\! Die KI kann solche Adressen wie Musterstraße 12/3/DG/5 problemlos verarbeiten.
 </Accordion>
 
 ## 10. Prompt-Gestaltung, Verhalten & Antworten
 
 <Accordion title="Wie gestalte ich den Prompt, damit die KI z. B. Sprechpausen macht, Wörter richtig ausspricht oder bestimmte Reihenfolgen einhält?">
-Schreibe ins Prompt, wie die KI vorgehen soll (z. B. „Frage eine Info nach der anderen ab“). Für die Aussprache von Wörtern oder Namen kannst du Lautschrift oder Umschreibungen nutzen. Für Öffnungszeiten gib die Zeiten klar als Liste an und beschreibe, wie sich die KI bei Anfragen verhalten soll.
+  Schreibe ins Prompt, wie die KI vorgehen soll (z. B. „Frage eine Info nach der anderen ab“). Für die Aussprache von Wörtern oder Namen kannst du Lautschrift oder Umschreibungen nutzen.
 </Accordion>
 
 <Accordion title="Kann ich beliebig viele Regeln, FAQs und Wissen ins Prompt packen?">
-Ja, bis zu 100.000 Zeichen sind erlaubt. Für noch mehr Infos nutze die Wissensdatenbank (PDFs, AGBs, Anleitungen etc.). Halte Prompts aber so kurz wie möglich, so lang wie nötig.
+  Ja, bis zu 100.000 Zeichen sind erlaubt. Für noch mehr Infos nutze die Wissensdatenbank (PDFs, AGBs, Anleitungen etc.).
+</Accordion>
+
+<Accordion title="Wie werden die Tools im Prompt aufgerufen?">
+  Wenn du ein bestimmtes Tool nutzen möchtest, gib einfach an, welches Tool du verwenden willst, zum Beispiel „nutze das Tool ‚Tool 1‘“.
+</Accordion>
+
+<Accordion title="Wie funktioniert der Generator und wie verwende ich ihn?">
+  Der Generator in ChatGPT hilft dir, Inhalte zu erstellen. Du gibst an, was du benötigst, und kannst den Text direkt in das gewünschte Format einfügen.
+</Accordion>
+
+<Accordion title="Beeinflusst die Länge des Prompts oder die Anzahl/Länge der hochgeladenen PDFs die Reaktionszeit des AI-Agenten?">
+  Ja, aber nur minimal. Die verzögerte Antwortzeit ist in der Regel vernachlässigbar.
+</Accordion>
+
+<Accordion title="Habt ihr einen Muster-Prompt als Vorlage für optimale Formulierungen mit Hashtags?">
+  Ja, wir bieten Vorlagen für vier allgemeine Anwendungsfälle an.
+</Accordion>
+
+<Accordion title="Kann man Verzweigungen einbauen, zum Beispiel unterschiedliche Fragen für Bestandskunden und Neukunden?">
+  Ja, das ist möglich\! Du kannst verschiedene Fragen für Bestandskunden und Neukunden durch logische Verzweigungen im Prompt gestalten.
+</Accordion>
+
+<Accordion title="Wie komplex darf ein Prompt sein? Ab wann wird er zu lang?">
+  Ein Prompt kann bis zu 100.000 Zeichen lang sein. Doch manchmal ist es besser, ihn aufzuteilen und in mehrere Abschnitte zu teilen.
+</Accordion>
+
+<Accordion title="Wie lang dürfen die Prompts sein?">
+  Die Prompts dürfen bis zu 100.000 Zeichen lang sein.
+</Accordion>
+
+<Accordion title="Gibt es bei Prompting eine bestimmte Reihenfolge?">
+  Wir empfehlen, die Reihenfolge unserer Muster-Prompts zu befolgen, aber das ist nicht zwingend erforderlich.
+</Accordion>
+
+<Accordion title="Wie groß ist das Kontextfenster des Prompts?">
+  Das Kontextfenster des Prompts umfasst 100.000 Zeichen, was etwa 20 A4-Seiten Text entspricht.
+</Accordion>
+
+<Accordion title="Habt ihr Muster für Konfigurationen oder Prompts, um zu starten?">
+  Ja, im Prompt-Fenster findest du vier Vorlagen. Diese kannst du nutzen, um deinen Use-Case auszubauen.
+</Accordion>
+
+<Accordion title="Gibt es im Prompt eine Gliederung oder Gruppierung für Prompts?">
+  Im Prompt empfehlen wir, die Struktur des Muster-Prompts zu beachten. Die Gliederung erfolgt durch Kategorien, die durch `#` als Überschriften gekennzeichnet sind.
+</Accordion>
+
+<Accordion title="Wie viele PDF-Dokumente kann ich im Prompt hochladen und kann ich sie verwalten?">
+  Es gibt momentan kein Limit für das Hochladen von PDF-Dokumenten im Prompt. Du kannst jedoch alle hochgeladenen Dokumente verwalten.
+</Accordion>
+
+<Accordion title="Wie kann ich meinen Prompt strukturieren? Was hat es mit dem '#' in der Präsentation auf sich?">
+  Du kannst deinen Prompt am besten im Markdown-Format strukturieren. Das '#' wird verwendet, um Überschriften zu kennzeichnen.
+</Accordion>
+
+<Accordion title="Wie unterstützt ihr beim Schreiben der Prompts und kostet das extra?">
+  Wir stellen Vorlagen zur Verfügung, die dir beim Schreiben der Prompts helfen. Außerdem bieten wir gegen Entgelt die komplette Einrichtung des Assistenten an.
+</Accordion>
+
+<Accordion title="Wie kann ich die Unterbrechungen durch unsere KI während Anrufen reduzieren?">
+  Das kannst du in den technischen Einstellungen anpassen. Schau dort nach den Optionen zur Gesprächssteuerung.
 </Accordion>
 
 ## 11. Preise, Kosten & Rückerstattung
 
 <Accordion title="Was kostet Fonio? Gibt es Fixkosten oder eine Einrichtungsgebühr?">
-Du zahlst nur für das, was du wirklich nutzt. Es gibt ein Mindest-Startguthaben von 300 €. Pro Gesprächsminute zahlst du zwischen 25 und 35 Cent, je nach Volumen. Jede eigene Rufnummer kostet 9 € pro Monat, diese kanst du jederzeit auch wieder entfernen. Es gibt keine weiteren Setup-Gebühren.
+  Du zahlst nur für das, was du wirklich nutzt. Es gibt ein Mindest-Startguthaben von 300 €. Pro Gesprächsminute zahlst du zwischen 25 und 35 Cent, je nach Volumen. Jede eigene Rufnummer kostet 9 € pro Monat, diese kannst du jederzeit auch wieder entfernen. Es gibt keine weiteren Setup-Gebühren.
 </Accordion>
 
 <Accordion title="Kostet das Testen der KI Geld?">
-Ja, aktuell kostet das Testen ein paar Cent pro Minute, weil auch für uns Kosten entstehen, wir geben hier aktuell 50% Rabatt auf den Minutenpreis. Vieltester bekommen von uns oft Kulanzminuten oder ein Guthaben.
+  Ja, aktuell kostet das Testen ein paar Cent pro Minute, weil auch für uns Kosten entstehen, wir geben hier aktuell 50% Rabatt auf den Minutenpreis. Vieltester bekommen von uns oft Kulanzminuten oder ein Guthaben.
+</Accordion>
+
+<Accordion title="Können bestehende Kunden auch den Gutschein nutzen?">
+  Ja, bestehende Kunden können den Gutschein ebenfalls für ihre nächste Aufladung verwenden.
+</Accordion>
+
+<Accordion title="Wie gebe ich meinen Guthabencode als Bestandskunde ein?">
+  Wenn du bereits einen Account hast, kannst du den Guthabencode bei deiner nächsten Aufladung einlösen.
+</Accordion>
+
+<Accordion title="Muss ich das neue Guthaben bis morgen Mittag buchen, um den Gutscheincode zu nutzen, obwohl ich schon Guthaben habe?">
+  Ja, der Gutscheincode ist nur bis morgen Mittag gültig.
+</Accordion>
+
+<Accordion title="Kann ich mit weniger als 300 € Startguthaben loslegen?">
+  Momentan ist 300 € das Mindestguthaben, um mit fonio zu starten. Allerdings bieten wir eine 30-Tage-Geld-zurück-Garantie an.
+</Accordion>
+
+<Accordion title="Warum fallen Kosten nur für das Testen an?">
+  Die Kosten für das Testen entstehen durch die Infrastruktur, die wir bereitstellen, sowie durch die Tools und die Nutzung des LLM. Aber keine Sorge, wir bieten einen Rabatt von 50% auf das Testen an.
+</Accordion>
+
+<Accordion title="Beziehen sich die Kosten auf die netto KI-Zeit oder die Brutto-Zeit?">
+  Die Kosten beziehen sich auf die gesamte Anrufdauer, also vom Moment, in dem die KI abhebt, bis zum Auflegen.
+</Accordion>
+
+<Accordion title="Kostet jeder Assistent extra und habe ich für jeden Assistenten eine eigene Rufnummer?">
+  Du kannst die Assistenten kostenlos nutzen\! Rufnummern hingegen kosten 9 € pro Monat.
+</Accordion>
+
+<Accordion title="Gilt der 9 € Tarif auch für CH-Rufnummern?">
+  Ja, der Tarif von 9 € pro Monat gilt auch für CH-Rufnummern.
+</Accordion>
+
+<Accordion title="Wie unterstützt ihr beim Schreiben der Prompts und kostet das extra?">
+  Wir stellen Vorlagen zur Verfügung, die dir beim Schreiben der Prompts helfen. Außerdem bieten wir gegen Entgelt die komplette Einrichtung des Assistenten an.
 </Accordion>
 
 ## 12. Rechnungen & Steuern
 
 <Accordion title="Kann ich Fonio auch als Privatperson nutzen? Wie ist das mit der Rechnung und Steuernummer?">
-Ja, das geht! Wenn du keine AT- oder DE-Steuernummer hast, kannst du dieses Feld bei der Anmeldung einfach frei lassen. Privatpersonen bekommen die Mehrwertsteuer einfach auf der Rechnung ausgewiesen.
+  Ja, das geht\! Wenn du keine AT- oder DE-Steuernummer hast, kannst du dieses Feld bei der Anmeldung einfach frei lassen. Privatpersonen bekommen die Mehrwertsteuer einfach auf der Rechnung ausgewiesen.
 </Accordion>
 
 <Accordion title="Kann ich mich mit meinem Unternehmen bei fonio anmelden, wenn ich meinen Sitz außerhalb von Deutschland oder Österreich habe?">
-Ja, das geht! Wenn du international tätig bist, kannst du dich gerne einfach auf der Plattform registrieren. Wenn du eine Rechnung brauchst, wo deine UID angeführt wird, gib uns einfach Bescheid unter support@fonio.ai. Wir erstellen dir dann eine manuelle Rechnung.
+  Ja, das geht\! Wenn du international tätig bist, kannst du dich gerne einfach auf der Plattform registrieren. Wenn du eine Rechnung brauchst, wo deine UID angeführt wird, gib uns einfach Bescheid unter [support@fonio.ai](mailto:support@fonio.ai).
 </Accordion>
 
 ## 13. Partner & Integration
 
 <Accordion title="Ich möchte Fonio als Partner weiterempfehlen oder für eigene Kunden einsetzen – geht das? Gibt es ein Partnerprogramm?">
-Ja! Wir freuen uns immer über neue Partnerschaften – egal ob KI-Berater, Softwareentwickler oder Unternehmen. Infos gibt’s auf der Website unter „Partner werden“ oder schreib uns einfach direkt.
+  Ja\! Wir freuen uns immer über neue Partnerschaften – egal ob KI-Berater, Softwareentwickler oder Unternehmen. Infos gibt’s auf der Website unter „Partner werden“ oder schreib uns einfach direkt.
 </Accordion>
 
 <Accordion title="Ich möchte Fonio als Software nutzen, um mit meiner eigenen Marke KI-Telefonie anzubieten, ist das möglich?">
-Ja! Wir freuen uns immer über neue Partnerschaften – wir bieten in diesem Fall eine Whitelabel Partnerschaft an. Hier kaufst du zu vergünstigten Konditionen bei uns ein, und trittst nach außen vollständig mit deiner eigenen Marke auf.
+  Ja\! Wir freuen uns immer über neue Partnerschaften – wir bieten in diesem Fall eine Whitelabel Partnerschaft an.
 </Accordion>
 
 ## 14. Technik, Spezialfunktionen & Verbesserungen
 
 <Accordion title="Wie kann ich Sprechgeschwindigkeit, Sensitivität oder Kreativität der KI einstellen?">
-Im Bereich „Technisches“ kannst du Sprechgeschwindigkeit und Sensitivität individuell einstellen. Für manche Use Cases lohnt es sich, die Kreativität zu erhöhen oder zu senken. Die Latenz kannst du hier nicht beeinflussen, die ist vom Modell gegeben
+  Im Bereich „Technisches“ kannst du Sprechgeschwindigkeit und Sensitivität individuell einstellen. Für manche Use Cases lohnt es sich, die Kreativität zu erhöhen oder zu senken. Die Latenz kannst du hier nicht beeinflussen.
 </Accordion>
 
 <Accordion title="Die Latenz ist zu hoch, was kann ich tun, um das zu verbessern?">
-Unter “Technisches” kannst du das Sprachverarbeitungsmodell auswählen. Hier findest du auch einen Hinweis, welche besonders schnell sind, und eine geringe Latenz anbieten. Abgesehen von der Wahl dieses Modells hast du keine Möglichkeit, die Latenz zu beeinflussen. Diese hängt von vielen verschiedenen Faktoren ab, und schwankt auch regelmäßig. Wir arbeiten hier stetig daran, die Latenz zu verbessern.
+  Unter “Technisches” kannst du das Sprachverarbeitungsmodell auswählen. Hier findest du auch einen Hinweis, welche besonders schnell sind, und eine geringe Latenz anbieten.
 </Accordion>
 
 <Accordion title="Was macht Fonio besonders im Vergleich zu anderen Anbietern?">
-Wir bauen unsere Software selbst und setzen auf flexible, EU-basierte Technologie. Da wir unsere Telefon-KI von Anfang an auf Deutsch optimiert haben, werden E-Mail-Adressen, Kennzeichen und spezielle Daten werden zuverlässig erkannt, unsere Latenzen sind niedrig und der Datenschutz ist auf EU-Niveau.
+  Wir bauen unsere Software selbst und setzen auf flexible, EU-basierte Technologie. Da wir unsere Telefon-KI von Anfang an auf Deutsch optimiert haben, werden E-Mail-Adressen, Kennzeichen und spezielle Daten zuverlässig erkannt, unsere Latenzen sind niedrig und der Datenschutz ist auf EU-Niveau.
 </Accordion>
 
 <Accordion title="Was tun, wenn die KI falsch rechnet?">
-Die KI ist kein Taschenrechner. Für komplexe Rechnungen empfiehlt sich eine externe API, deren Ergebnis dann in das Gespräch eingebunden wird. Klassische LLMs haben leider Schwierigkeiten mit echten Logik Aufgaben und Rechnungen. Wir empfehlen, die KI nicht rechnen zu lassen, da das auf Dauer zu fehleranfällig ist.
+  Die KI ist kein Taschenrechner. Für komplexe Rechnungen empfiehlt sich eine externe API, deren Ergebnis dann in das Gespräch eingebunden wird.
+</Accordion>
+
+<Accordion title="Muss ich keine Rufnummer mehr kaufen, wenn ich SIP nutzen möchte?">
+  Ja, genau\! Mit SIP kannst du eine Nebenstelle, wie z. B. die 74 in eurer selbst gehosteten 3CX, festlegen. Wenn der Mitarbeiter dann die 74 wählt, übernimmt die KI von Fonio.
+</Accordion>
+
+<Accordion title="Kann ich Outbound auch mit der SIP nutzen, wenn das geläuft ist?">
+  Ja, das wird möglich sein\!
+</Accordion>
+
+<Accordion title="Ist eine Benutzerverwaltung geplant, damit mehrere Mitarbeiter gemeinsam an den Einstellungen arbeiten können?">
+  Ja, eine Benutzerverwaltung ist in Arbeit und wird bald verfügbar sein.
+</Accordion>
+
+<Accordion title="Wie funktioniert die Sentiment-Analyse bei Anrufen? Kann ich informiert werden, wenn die KI erkennt, dass ein Kunde sehr verärgert ist?">
+  Die Sentiment-Analyse von Anrufen ist teilweise möglich, insbesondere durch die Extraktion von Variablen.
+</Accordion>
+
+<Accordion title="Wie viele Anrufe kann ein Agent im Outbound gleichzeitig durchführen?">
+  Ein Agent kann bis zu 15 Anrufe gleichzeitig im Outbound durchführen.
+</Accordion>
+
+<Accordion title="Wie viele Anrufe kann ein Agent gleichzeitig halten? Kann man mehrere Outbound-Anrufe gleichzeitig machen, um die Produktivität zu erhöhen?">
+  Ein Agent kann bis zu 15 Anrufe gleichzeitig halten. Theoretisch könntest du auch mehrere Outbound-Anrufe gleichzeitig tätigen.
+</Accordion>
+
+<Accordion title="Wann ist die SIP-Trunk-Fähigkeit verfügbar, damit ich eine Nebenstelle meiner Telefonanlage nutzen kann?">
+  Die SIP-Trunk-Fähigkeit wird ganz bald verfügbar sein.
+</Accordion>
+
+<Accordion title="Wie kann ich meine T-Mobile Voicemail durch Fonio ersetzen?">
+  Um deine T-Mobile Voicemail durch Fonio zu ersetzen, musst du eine Anrufweiterleitung von deinem Telefon oder Handy an Fonio einrichten.
+</Accordion>
+
+<Accordion title="Kann die Antwortzeit der KI schwanken, je nach Serverauslastung?">
+  Ja, die Antwortzeiten können variieren, besonders wenn die Server stark ausgelastet sind.
+</Accordion>
+
+<Accordion title="Kann ich die Aufzeichnung während eines Gesprächs starten, wenn es Missverständnisse gibt?">
+  Das ist momentan nicht möglich. Der Anruf wird immer transkribiert und aufgenommen, falls du das ausgewählt hast.
+</Accordion>
+
+<Accordion title="Wie groß kann das Kontext-Window sein?">
+  Das Kontext-Window kann bis zu 100.000 Zeichen umfassen.
+</Accordion>
+
+<Accordion title="Wie viele Anrufe kann die KI gleichzeitig beantworten?">
+  Die KI kann offiziell bis zu 15 Anrufe gleichzeitig bearbeiten, tatsächlich sind aber auch mehr möglich.
 </Accordion>
