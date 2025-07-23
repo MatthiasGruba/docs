@@ -67,18 +67,18 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
+          "anchor": "fonio.ai",
           "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "icon": "phone"
         },
         {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "anchor": "fonio Plattform",
+          "href": "https://app.fonio.ai/",
+          "icon": "phone-square"
         },
         {
           "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
+          "href": "https://www.fonio.ai/blog-tags/blog-article",
           "icon": "newspaper"
         }
       ]
@@ -103,9 +103,7 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "linkedin": "https://www.linkedin.com/company/fonio-ai"
     }
   }
 }
