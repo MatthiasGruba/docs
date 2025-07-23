@@ -26,7 +26,7 @@
               "Verhalten/SpracheStimme",
               "Verhalten/Startnachricht",
               "Verhalten/Prompt",
-              "Verhalten/Telefonnummer",
+              "Telefonnummern/Telefonnummern",
               "Verhalten/Wissensdatenbank"
             ]
           },
@@ -85,14 +85,14 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/HelpCenter.png",
+    "dark": "/logo/HelpCenter.png"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@fonio.ai"
       }
     ],
     "primary": {
