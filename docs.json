@@ -23,6 +23,7 @@
           {
             "group": "Verhalten",
             "pages": [
+              "Verhalten/Verhalten",
               "Verhalten/SpracheStimme",
               "Verhalten/Startnachricht",
               "Verhalten/Prompt",
