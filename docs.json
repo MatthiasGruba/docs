@@ -42,6 +42,15 @@
             ]
           },
           {
+            "group": "Tools",
+            "pages": [
+              "Tools/AnrufWeiterleitung",
+              "Tools/Terminbuchung",
+              "Tools/Suchanfrage",
+              "Tools/APIRequest"
+            ]
+          },
+          {
             "group": "Essentials",
             "pages": [
               "essentials/markdown",

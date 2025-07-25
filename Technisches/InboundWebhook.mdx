@@ -1,5 +1,105 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Inbound Webhook"
+description: "Hier findest du alle Informationen, die du brauchst, um den Inbound Webhook für deinen Assistenten zu konfigurieren."
 ---
 
+Mit dem **Inbound-Webhook-Feature** kannst du deinen Fonio KI-Telefonassistenten so konfigurieren, dass er bei eingehenden Anrufen automatisch kundenspezifische Informationen – wie den Namen des Anrufers – aus einer externen Datenbank abruft und diese direkt im Gespräch nutzt.\
+Dabei wird bei jedem eingehenden Anruf ein Webhook ausgelöst, der die anrufende Nummer weitergibt. Das zurückgegebene Resultat kann anschließend über `{{variable}}` im Prompt des Assistenten verwendet werden.
+
+<Accordion title="Die wichtigsten Infos zum Inbound-Webhook im Video (Dauer: 4min)" defaultOpen icon="video">
+  <iframe width="560" height="415" src="https://www.youtube.com/embed/5lJj4DvzPWI?si=-AhufLDpqGHg5gyd" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen style={{ width:"100%",borderRadius:"0.5rem" }} />
+</Accordion>
+
+## Einleitung
+
+Du möchtest, dass dein KI-Telefonassistent bei eingehenden Anrufen vorab Informationen abfragt und diese direkt im Gespräch nutzt – beispielsweise **Name, Kundennummer oder Anrufhistorie**?
+
+Genau das ermöglicht der **Inbound Webhook**.\
+In diesem Guide zeigen wir dir Schritt für Schritt, wie du das neue Feature mit **fonio.ai** und **Make.com** einrichtest.
+
+---
+
+## Voraussetzungen für die Einrichtung
+
+Für die Einrichtung sind folgende Punkte erforderlich:
+
+1. **Automation-Software** wie _Make.com_, um den Webhook abzufangen und eine Datenbankabfrage auszuführen.
+2. **Datenbank mit Kundendaten**, z. B. ein Google Sheet mit Telefonnummern und Kundennamen.
+3. **Tool zum Testen des Webhooks**, wie _Postman_, um die Funktionsweise vor dem Live-Betrieb zu prüfen.
+
+---
+
+## Einrichtung eines Inbound Webhooks
+
+### 1. Inbound-Webhook in Fonio aktivieren
+
+- Öffne in der Fonio App den Reiter **„Technisches“**.
+- Aktiviere die Funktion **„Inbound-Webhook“**.
+- Diese Option ermöglicht die Kommunikation zwischen externen Systemen und Fonio.
+
+---
+
+### 2. Webhook-Szenario in Make.com erstellen
+
+- Erstelle in **Make.com** ein neues Szenario.
+- Wähle als Startpunkt **„Custom Webhook“** und erstelle einen neuen Webhook.
+- Kopiere die generierte Webhook-URL.
+- Trage die URL in der Fonio App unter **„Webhook-URL“** ein und speichere.
+
+---
+
+### 3. Automation Workflow in Make erstellen
+
+- Suche in deiner Datenbank (z. B. Google Sheets) nach Informationen zur anrufenden Nummer.
+- Sende die Daten als **JSON-Response** zurück an Fonio, z. B. `{{name}}`.
+- Beispiel:\
+  Der Assistent begrüßt den Anrufer mit\
+  **„Hallo , ich bin die KI-Telefonassistentin von XY…“**
+
+**Beispiel-Flow in Make (4 Schritte):**
+
+1. **Custom Webhook** empfangen.
+2. **Google Sheets „SearchRows“**: Abfrage nach Telefonnummer.
+3. **Router Node**: Unterscheidung zwischen _Name gefunden_ / _Name nicht gefunden_.
+4. **Webhook Response**: Variable `{{name}}` oder „nicht gefunden“ zurückgeben.
+
+   > Achte darauf, in den **Advanced Settings** den `content-type` auf **application/json** zu setzen.
+
+---
+
+### 4. Webhook-Automation mit Postman testen
+
+- Erstelle eine **POST-Request** an die Webhook-URL.
+- Verwende JSON im Body, z. B.:
+
+  ```json
+  { "fromNumber": "+4915123456789", "toNumber": "+49891234567" }
+  ```
+- Teste sowohl vorhandene als auch unbekannte Nummern, um die Logik zu prüfen.
+
+---
+
+### 5. Inbound Webhook mit Fonio testen
+
+- Stelle sicher, dass die richtige **Webhook-URL** in Fonio eingetragen ist.
+- Ergänze den Namen der Variable (z. B. `{{name}}`) im Prompt oder in der Startnachricht.
+- Führe einen **echten Testanruf** durch (kein Browser-Test möglich).
+
+Beispiel:\
+„**Hallo Isabella, hier ist Lena von Fonio, wie kann ich helfen?**“
+
+---
+
+## Fazit
+
+Mit dem **Inbound-Webhook** machst du deinen KI-Telefonassistenten noch flexibler und intelligenter.\
+Du kannst in Echtzeit Daten abrufen und im Gespräch nutzen, z. B.:
+
+- Kundeninformationen oder IDs bereitstellen
+- Anrufhistorien als Kontext übermitteln
+- Dynamische Begrüßungen je nach Tageszeit umsetzen
+- Startnachrichten und Prompts dynamisch anpassen
+- Produktsortimente einblenden
+- Aktive Supportnummern für Weiterleitungen anpassen
+- IDs erzeugen und im Kontextfeld übergeben
+- Komplette Prompts dynamisch als Variable bereitstellen
