@@ -31,6 +31,17 @@
             ]
           },
           {
+            "group": "Technisches",
+            "pages": [
+              "Technisches/AnrufEinstellungen",
+              "Technisches/Audio",
+              "Technisches/Funktionen",
+              "Technisches/Aufzeichnung",
+              "Technisches/VariablenExtraktion",
+              "Technisches/InboundWebhook"
+            ]
+          },
+          {
             "group": "Essentials",
             "pages": [
               "essentials/markdown",
