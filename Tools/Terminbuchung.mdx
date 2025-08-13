@@ -1,6 +1,102 @@
 ---
-title: 'Terminbuchung'
-description: 'Hier erfährst du, wie du mit fonio direkt im Anruf Termine buchen kannst.'
+title: "Terminbuchung"
+description: "Hier erfährst du, wie du fonio mit deiner Terminbuchung über Cal.com verknüpfen kannst."
 ---
 
-calendly geht nicht
+In diesem Beitrag lernst du Schritt für Schritt, wie du **Cal.com** für Terminbuchungen in fonio einbindest. Du erstellst einen **API Key**, holst dir die **Event ID**, trägst beides in fonio ein und definierst, ob dein Assistent nur anzeigen oder auch **buchen** darf.
+
+<Card title="Was du dafür brauchst">
+  - Cal.com Zugang
+  - Cal.com API-Schlüssel
+  - Zugriff auf fonio Assistenten
+  - Event Typ in Cal.com, der gebucht werden soll
+</Card>
+
+## So funktioniert es
+
+<Steps>
+  <Step title="In Cal.com API Key anlegen">
+    Öffne in Cal.com die Einstellungen und wechsle zum Bereich für API Schlüssel. Erstelle einen neuen Schlüssel und gib ihm einen Namen den du wiedererkennst, zum Beispiel **fonio API Key**. Kopiere den Schlüssel. Wichtig: Speichere den Schlüssel an einem sicheren Ort, dieser wird dir nur einmal angezeigt.
+
+    ![Clean Shot2025 08 13at14 50 30 Gi](/images/CleanShot2025-08-13at14.50.30.gif)
+  </Step>
+  <Step title="Event ID in Cal.com finden">
+    Zuerst musst du ein passendes Event in [Cal.com](http://Cal.com) erstellen. \*\*Wichtig: \*\*Hier darfst du keien zusätzlichen Felder anlegen, die ausgefüllt werden müssen. Sonst funktioniert die Kalenderbuchung über fonio nicht. Öffne danach deinen Event Typ in Cal.com, der gebucht werden soll. Notiere dir die **Event ID** oder den eindeutigen Link zum Event.
+
+    <Tip>
+      Die Event ID findest du in der URL. Dort kannst du sie direkt herauskopieren.
+    </Tip>
+    ![Clean Shot2025 08 13at15 00 54 Gi](/images/CleanShot2025-08-13at15.00.54.gif)
+  </Step>
+  <Step title="Fonio öffnen und Terminbuchung aktivieren">
+    Öffne deinen Assistenten in fonio. Wechsle in den Bereich **Tools** und aktiviere **Terminbuchung**.
+
+    ![Clean Shot2025 08 13at15 03 11@2x Pn](/images/CleanShot2025-08-13at15.03.11@2x.png)
+  </Step>
+  <Step title="API Key und Event ID hinterlegen">
+    Füge den Cal.com **API Key** in das entsprechende Feld ein. Trage die **Event ID** ein. Vergib optional eine Beschreibung, wenn du mehrere Kalender nutzt, damit der Assistent den richtigen Kalender zuordnet.
+
+    <img
+      src="/images/CleanShot2025-08-13at15.04.19@2x.png"
+      alt="Clean Shot2025 08 13at15 04 19@2x Pn"
+      title="Clean Shot2025 08 13at15 04 19@2x Pn"
+      style={{ width:"52%" }}
+    />
+  </Step>
+  <Step title="Berechtigungen setzen">
+    Lege fest, ob die KI **nur Termine sehen** darf oder **Termine buchen** soll. Wähle die Option, die zu deinem Prozess passt.
+
+    <img
+      src="/images/CleanShot2025-08-13at15.05.30@2x.png"
+      alt="Clean Shot2025 08 13at15 05 30@2x Pn"
+      title="Clean Shot2025 08 13at15 05 30@2x Pn"
+      style={{ width:"65%" }}
+    />
+  </Step>
+  <Step title="Email oder SMS Bestätigung auswählen">
+    Wähle nun aus, ob der Anrufer die Bestätigung per Mail oder SMS erhalten soll. Wenn du Mail auswählst, muss der Anrufer seine Email Adresse in dem Anruf bekannt geben. Wir empfehlen grundsätzlich immer die Bestätigung per SMS, da die eingehende Nummer automatisch bekannt ist.
+
+    <img
+      src="/images/CleanShot2025-08-13at15.06.14@2x.png"
+      alt="Clean Shot2025 08 13at15 06 14@2x Pn"
+      title="Clean Shot2025 08 13at15 06 14@2x Pn"
+      style={{ width:"62%" }}
+    />
+  </Step>
+  <Step title="Speichern und testen">
+    Speichere die Einstellungen. Starte einen **Audio Test** in deinem Assistenten und prüfe die Terminbuchung mit einem Testfall.
+  </Step>
+</Steps>
+
+<Note>
+  Wenn du mehrere Event Typen hast, erstelle für jeden Typ eine eigene Konfiguration oder beschreibe im Prompt, welche Art von Termin gebucht werden soll.
+</Note>
+
+## Best Practices aus dem Transkript
+
+- **Klare Bezeichnung** für API Schlüssel verwenden. So behältst du den Überblick in Cal.com.
+- **Beschreibung** in fonio setzen, wenn du mehrere Kalender oder Teams nutzt, damit die Zuordnung eindeutig bleibt.
+- **Audio Test** direkt nach dem Speichern durchführen, um Flows schnell zu validieren.
+
+## Fehlersuche
+
+<Accordion title="Buchen klappt nicht" defaultOpen icon="life-buoy">
+  Prüfe, ob der **API Key** gültig ist und ob die **Event ID** zum richtigen Event Typ gehört. Vergewissere dich, dass der Assistent die Berechtigung **Buchen** besitzt. Gehe sicher, dass bei dem Termin in Cal.com keine zusätzlichen Felder angelegt sind.
+</Accordion>
+
+<Accordion title="Keine freien Slots" icon="calendar-x">
+  Prüfe in Cal.com, ob für den Event Typ überhaupt freie Zeitfenster sichtbar sind. Falls nötig, erweitere die Verfügbarkeiten.
+</Accordion>
+
+<Accordion title="Mehrere Termin-Typen vorhanden" icon="layers">
+  Nutze die **Beschreibung** in fonio, um den Zielkalender eindeutig zu markieren. So wählt die KI den richtigen Kalender. Gib im Prompt vor, wann welcher Termin gebucht werden soll.
+</Accordion>
+
+## Zusammenfassung
+
+- In Cal.com **API Key** erstellen und **Event ID** notieren
+- In fonio **Terminbuchung** aktivieren, **API Key** und **Event ID** eintragen
+- **Berechtigungen** wählen und **Audio Test** durchführen
+- **Prompt** um klare Buchungsbedingungen erweitern
+
+Für Fragen oder Unterstützung steht dir unser Team unter [**support@fonio.ai**](mailto:support@fonio.ai) zur Verfügung.

@@ -1,5 +1,63 @@
 ---
-title: 'Email Versenden'
-description: 'Hier erfährst du, wie du Emails in der Nachverarbeitung von Anrufen bei fonio nutzen kannst.'
+title: "Email Versenden"
+description: "Hier erfährst du, wie du Emails in der Nachverarbeitung von Anrufen bei fonio nutzen kannst."
 ---
 
+In diesem Beitrag lernst du Schritt für Schritt, wie du mit fonio Anrufe automatisch per Email nachverarbeiten kannst. Du kannst dir beispielsweise das Transkript, oder bestimmte Informationen dynamisch per Mail senden lassen, sobald fonio einen Anruf für dich übernommen hat.
+
+## So funktioniert es
+
+<Steps>
+  <Step title="Betreff festlegen">
+    Öffne die Email Nachverarbeitung. Zuerst musst du einen Betreff der Mail festlegen.
+
+    <img
+      src="/images/CleanShot2025-08-13at15.34.33@2x.png"
+      alt="Clean Shot2025 08 13at15 34 33@2x Pn"
+      title="Clean Shot2025 08 13at15 34 33@2x Pn"
+      style={{ width:"68%" }}
+    />
+  </Step>
+  <Step title="Festlegen der Empfänger">
+    Bei der Auswahl der Empfänger hast du 2 Möglichkeiten:
+
+    1. `Statische Empfänger:` Hier gibst du einfach an, an welche Email Adresse(n) das Mail versandt werden soll.
+    2. `Dynamische Empfänger:` Hier kannst du dynamisch festlegen, unter welcher Bedingung die Mail an welchen Empfänger gehen soll. Du kannst also einen eigenen Prompt bauen, wie genau Mails versandt werden sollen.
+
+       <img
+         src="/images/CleanShot2025-08-13at15.35.14@2x.png"
+         alt="Clean Shot2025 08 13at15 35 14@2x Pn"
+         title="Clean Shot2025 08 13at15 35 14@2x Pn"
+         style={{ width:"75%" }}
+       />
+  </Step>
+  <Step title="Email Inhalt festlegen">
+    Hier gibt es wieder 2 Möglichkeiten, den Inhalt der Mail festzulegen:
+
+    1. `Standard:` Hier kannst du eine fixe Nachricht festlegen, die immer gleich versandt wird. Du kannst hier verschiedene Variablen einsetzen, die während dem Gespräch extrahiert wurden, oder ohnehin vorhanden sind. Variablen aus dem Inbound Webhook oder dem Kontext des Outbound API Calls kannst du auch mit `context.variable` einfügen
+
+       <img
+         src="/images/CleanShot2025-08-13at15.35.55@2x.png"
+         alt="Clean Shot2025 08 13at15 35 55@2x Pn"
+         title="Clean Shot2025 08 13at15 35 55@2x Pn"
+         style={{ width:"70%" }}
+       />
+    2. `Individueller Prompt:` Hier kannst du festlegen, was in der Nachricht enthalten sein soll. Hier schreibst du einen Prompt, mit dem die KI, basierend auf dem Transkript, eine individuelle Email verfasst.
+
+       <img
+         src="/images/CleanShot2025-08-13at15.36.22@2x.png"
+         alt="Clean Shot2025 08 13at15 36 22@2x Pn"
+         title="Clean Shot2025 08 13at15 36 22@2x Pn"
+         style={{ width:"72%" }}
+       />
+  </Step>
+  <Step title="Speichern & Testen">
+    Jetzt kannst du deine Nachverarbeitung speichern, und direkt im Browser testen. Bei Testanrufen werden auch alle Nachverarbeitungen durchgefgührt, sofern die notwendigen Bedingungen erfüllt sind.
+  </Step>
+</Steps>
+
+<Tip>
+  **Wichtig:** Oft macht es Sinn, mehrere Email Nachverarbeitungen zu erstellen. Das ist grundsätzlich auch möglich und keine Problem. Hier ist es dann besonders wichtig, klar in den Bedingungen zu sein, wann welche Email versendet werden soll.
+</Tip>
+
+Für Fragen oder Unterstützung steht dir unser Team unter [**support@fonio.ai**](mailto:support@fonio.ai) zur Verfügung.
