@@ -59,6 +59,12 @@
             ]
           },
           {
+            "group": "Häufig gestellte fragen",
+            "pages": [
+              "FAQ/FAQ"
+            ]
+          },
+          {
             "group": "Essentials",
             "pages": [
               "essentials/markdown",
