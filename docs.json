@@ -51,6 +51,14 @@
             ]
           },
           {
+            "group": "Nachverarbeitung",
+            "pages": [
+              "Nachverarbeitung/EmailVersenden",
+              "Nachverarbeitung/SMSVersenden",
+              "Nachverarbeitung/APIRequest"
+            ]
+          },
+          {
             "group": "Essentials",
             "pages": [
               "essentials/markdown",
@@ -94,7 +102,7 @@
         {
           "anchor": "fonio Plattform",
           "href": "https://app.fonio.ai/",
-          "icon": "phone-square"
+          "icon": "phone"
         },
         {
           "anchor": "Blog",
