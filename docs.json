@@ -59,7 +59,25 @@
             ]
           },
           {
-            "group": "Häufig gestellte fragen",
+            "group": "Telefonnummern",
+            "pages": [
+              "Telefonnummern/Telefonnummern",
+              "Telefonnummern/fonioTelefonnummern",
+              "Telefonnummern/IndividuelleTelefonnummern",
+              "Telefonnummern/SIPNummern"
+            ]
+          },
+          {
+            "group": "Beispiel-Prompts",
+            "pages": [
+              "Beispiele/Anrufbeantworter",
+              "Beispiele/Empfangsperson",
+              "Beispiele/Terminbuchung",
+              "Beispiele/FirstLevelSupport"
+            ]
+          },
+          {
+            "group": "Häufig gestellte Fragen",
             "pages": [
               "FAQ/FAQ"
             ]
