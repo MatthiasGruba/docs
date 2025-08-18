@@ -14,7 +14,7 @@
                 "tab": "Help Center",
                 "groups": [
                     {
-                        "group": "Getting Started",
+                        "group": "Erste Schritte",
                         "pages": [
                             "Introduction/Introduction",
                             "Introduction/fonio-Quickstart"
@@ -112,7 +112,7 @@
             "anchors": [
                 {
                     "anchor": "fonio.ai",
-                    "href": "https://mintlify.com/docs",
+                    "href": "https://www.fonio.ai/",
                     "icon": "phone"
                 },
                 {
