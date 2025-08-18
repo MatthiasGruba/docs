@@ -66,20 +66,20 @@
                             "Telefonnummern/IndividuelleTelefonnummern"
                         ]
                     },
-                            {
+                    {
                         "group": "SIP Telefonnummern",
                         "pages": [
                             "SIP-Telefonnummern/3CX",
-                          "SIP-Telefonnummern/Starface",
-                          "SIP-Telefonnummern/Fritzbox",
-                          "SIP-Telefonnummern/Easybell",
-                          "SIP-Telefonnummern/Zadarma",
-                          "SIP-Telefonnummern/Placetel",
-                          "SIP-Telefonnummern/Peoplefon",
-                          "SIP-Telefonnummern/NFON",
-                          "SIP-Telefonnummern/Fonial",
-                          "SIP-Telefonnummern/Sipgate",
-                          "SIP-Telefonnummern/andere-anbieter"
+                            "SIP-Telefonnummern/Starface",
+                            "SIP-Telefonnummern/Fritzbox",
+                            "SIP-Telefonnummern/Easybell",
+                            "SIP-Telefonnummern/Zadarma",
+                            "SIP-Telefonnummern/Placetel",
+                            "SIP-Telefonnummern/Peoplefon",
+                            "SIP-Telefonnummern/NFON",
+                            "SIP-Telefonnummern/Fonial",
+                            "SIP-Telefonnummern/Sipgate",
+                            "SIP-Telefonnummern/andere-anbieter"
                         ]
                     },
                     {
@@ -103,26 +103,6 @@
                             "Datenschutz/Datenschutz",
                             "Datenschutz/fonioAGB",
                             "Datenschutz/AVV"
-                        ]
-                    }
-                ]
-            },
-            {
-                "tab": "API Reference",
-                "groups": [
-                    {
-                        "group": "API Documentation",
-                        "pages": [
-                            "api-reference/introduction"
-                        ]
-                    },
-                    {
-                        "group": "Endpoint Examples",
-                        "pages": [
-                            "api-reference/endpoint/get",
-                            "api-reference/endpoint/create",
-                            "api-reference/endpoint/delete",
-                            "api-reference/endpoint/webhook"
                         ]
                     }
                 ]
