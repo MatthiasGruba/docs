@@ -96,6 +96,14 @@
                         "pages": [
                             "FAQ/FAQ"
                         ]
+                    },
+                    {
+                        "group": "Datenschutz, AGBs & AVV",
+                        "pages": [
+                            "Datenschutz/Datenschutz",
+                            "Datenschutz/fonioAGB",
+                            "Datenschutz/AVV"
+                        ]
                     }
                 ]
             },
