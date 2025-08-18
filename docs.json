@@ -142,7 +142,7 @@
     },
     "logo": {
         "light": "/logo/fonio-logo.png",
-        "dark": "/logo/fonio-logo-white.png"
+        "dark": "/logo/whitelogo.svg"
     },
     "navbar": {
         "primary": {
