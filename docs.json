@@ -4,8 +4,8 @@
     "name": "Fonio API Documentation",
     "colors": {
         "primary": "#585DFE",
-        "light": "#07C983",
-        "dark": "#15803D"
+        "light": "#585DFE",
+        "dark": "#585DFE"
     },
     "favicon": "/logo/favicon-fonio.svg",
     "navigation": {
