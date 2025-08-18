@@ -63,8 +63,13 @@
                         "pages": [
                             "Telefonnummern/Telefonnummern",
                             "Telefonnummern/fonioTelefonnummern",
-                            "Telefonnummern/IndividuelleTelefonnummern",
-                            "Telefonnummern/SIPNummern"
+                            "Telefonnummern/IndividuelleTelefonnummern"
+                        ]
+                    },
+                            {
+                        "group": "SIP Telefonnummern",
+                        "pages": [
+                            "SIP-Telefonnummern/SIPNummern"
                         ]
                     },
                     {
