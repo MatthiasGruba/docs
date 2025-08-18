@@ -69,7 +69,8 @@
                             {
                         "group": "SIP Telefonnummern",
                         "pages": [
-                            "SIP-Telefonnummern/SIPNummern"
+                            "SIP-Telefonnummern/3CX",
+                          "SIP-Telefonnummern/andere-anbieter"
                         ]
                     },
                     {
