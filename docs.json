@@ -7,7 +7,7 @@
         "light": "#07C983",
         "dark": "#15803D"
     },
-    "favicon": "/favicon.svg",
+    "favicon": "/logo/favicon-fonio.svg",
     "navigation": {
         "tabs": [
             {
@@ -141,20 +141,14 @@
         }
     },
     "logo": {
-        "light": "/logo/HelpCenter.png",
-        "dark": "/logo/HelpCenter.png"
+        "light": "/logo/fonio-logo.png",
+        "dark": "/logo/fonio-logo.png"
     },
     "navbar": {
-        "links": [
-            {
-                "label": "Support",
-                "href": "mailto:support@fonio.ai"
-            }
-        ],
         "primary": {
             "type": "button",
-            "label": "Dashboard",
-            "href": "https://dashboard.mintlify.com"
+            "label": "Kontakt",
+            "href": "mailto:support@fonio.ai"
         }
     },
     "footer": {
