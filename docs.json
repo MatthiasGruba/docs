@@ -69,6 +69,7 @@
                     {
                         "group": "SIP Telefonnummern",
                         "pages": [
+                            "SIP-Telefonnummern/uebersicht",
                             "SIP-Telefonnummern/3CX",
                             "SIP-Telefonnummern/Starface",
                             "SIP-Telefonnummern/Fritzbox",
