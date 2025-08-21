@@ -1,0 +1,57 @@
+---
+title: "New file"
+description: "Description of your new file."
+---
+
+### SIP Trunk erstellen:
+
+Erstelle einen SIP Trunk mit FQDN Einstellung:
+
+![CleanShot 2025-08-21 at 13.08.42.png](/images/CleanShot2025-08-21at13.08.42.png)
+
+Füge die `vojhwtf1hn6.eu.sip.livekit.cloud` hinzu und wähle `SRV` als Eintrag.
+
+**Optional (Ausgehende Anrufe):**
+
+Füge Zugangsdaten für ausgehende Anrufe hinzu - der Name und Passwort kann beliebig gewählt werden:
+
+![CleanShot 2025-08-21 at 13.11.53.png](/images/CleanShot2025-08-21at13.11.53.png)
+
+Der Configuration Schritt kann übersprüngen werden.
+
+**Inbound**
+
+- Ändere das Nummer Format auf \+E.164 (Achtung nicht das \+ vergessen).
+- Wähle TCP als Protokoll aus
+- Ändere die Region auf Europa
+- Schränke die Codecs auf die im Screenshot ausgewählten Codes ein
+
+![CleanShot 2025-08-21 at 13.14.37.png](/images/CleanShot2025-08-21at13.14.37.png)
+
+**Outbound Settings V2**
+
+Wähle Default als Profil und dein Land bei Country
+
+![CleanShot 2025-08-21 at 13.16.51.png](/images/CleanShot2025-08-21at13.16.51.png)
+
+Schließlich musst du nur noch die bereits gekaufte Nummer zu dem Trunk hinzufügen
+
+### Nummer in Fonio erstellen
+
+Fülle Nummer / Name mit genau der Nummer die du hinzugefügt hast.
+
+Fülle optional für Outbound
+
+- Termination URL: `sip.telnyx.eu`
+- Username: Username von der Konfiguration
+- Passwort: Passwort von der Konfiguration
+
+<img
+  src="/images/CleanShot2025-08-21at13.19.19.png"
+  alt="CleanShot 2025-08-21 at 13.19.19.png"
+  title="CleanShot 2025-08-21 at 13.19.19.png"
+  className="mx-auto"
+  style={{ width:"66%" }}
+/>
+
+Nun kannst du die Nummer speichern und einem Assistenten zuweisen.
