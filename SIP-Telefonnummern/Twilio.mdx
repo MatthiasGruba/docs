@@ -1,10 +1,53 @@
 ---
-title: 'Twilio'
-description: 'Wie du Twilio mit Fonio verbindest'
+title: "Twilio"
+description: "Wie du Twilio mit Fonio verbindest"
 ---
 
-<Info>
-  Coming soon\!
-</Info>
+### Elastic SIP Trunk erstellen
 
+Navigiere zu Elastic SIP Trunks und erstelle einen neuen Trunk
 
+<img
+  src="/images/CleanShot2025-08-21at12.52.47.png"
+  alt="CleanShot 2025-08-21 at 12.52.47.png"
+  title="CleanShot 2025-08-21 at 12.52.47.png"
+  className="mx-auto"
+/>
+
+Aktiviere SIP REFER, PSTN Transfer und speichere deine Änderungen:
+
+![CleanShot 2025-08-21 at 12.54.24.png](/images/CleanShot2025-08-21at12.54.24.png)
+
+Füge die Origination hinzu:
+
+![CleanShot 2025-08-21 at 12.56.52.png](/images/CleanShot2025-08-21at12.56.52.png)
+
+Füge die Nummer hinzu die über Fonio verwendet werden soll:
+
+![CleanShot 2025-08-21 at 12.57.43.png](/images/CleanShot2025-08-21at12.57.43.png)
+
+**Optional (für ausgehende Anrufe):**
+
+Füge eine termination URL hinzu - diese kannst du belieg wählen:
+
+![CleanShot 2025-08-21 at 12.58.59.png](/images/CleanShot2025-08-21at12.58.59.png)
+
+Füge Credentials hinzu. Der Friendly Name spielt keine Rolle - Username \+ Passwort werden im nächsten Schritt nochmal benötigt.
+
+![CleanShot 2025-08-21 at 12.59.43.png](/images/CleanShot2025-08-21at12.59.43.png)
+
+### Nummer in Fonio erstellen:
+
+Füge hier die selbe Nummer wie in Twilio hinzu.
+
+Termination, Username u. Passwort müssen auch vom vorherigen Schritt genommen werden - dies ist aber optional.
+
+<img
+  src="/images/CleanShot2025-08-21at13.01.33.png"
+  alt="CleanShot 2025-08-21 at 13.01.33.png"
+  title="CleanShot 2025-08-21 at 13.01.33.png"
+  className="mx-auto"
+  style={{ width:"67%" }}
+/>
+
+Danach kannst du diese Nummer einem Assistenten zuweisen\! 🎉
