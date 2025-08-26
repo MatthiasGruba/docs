@@ -146,5 +146,11 @@
         "socials": {
             "linkedin": "https://www.linkedin.com/company/fonio-ai"
         }
+    },
+    "integrations": {
+        "posthog": {
+            "apiKey": "phc_3KsgomsvrK1QwfVRpukkM4CdczSRST7l3eJzhFbXEb2",
+            "apiHost": "https://eu.i.posthog.com"
+        }
     }
 }
