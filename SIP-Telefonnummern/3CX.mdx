@@ -5,18 +5,18 @@ description: "Wie du deine 3CX Anlage mit Fonio verbindest"
 
 ### Erstelle einen Trunk in 3CX
 
-Navigiere über die Admin Oberfläche zu dem Menüpunkt "Trunks & Chat" und erstelle dort über den \+Trunk Button einen neuen Trunk.
+Navigiere über die Admin Oberfläche zu dem Menüpunkt "Trunks & Chat" und erstelle dort über den +Trunk Button einen neuen Trunk.
 
 ![CleanShot 2025-08-18 at 11.36.27.png](/images/CleanShot2025-08-18at11.36.27.png)
 
-Wähle dabei die Option "Generic SIP Trunk (IP Based"). Achtung - diese ist nur bei hosted Anlagen verfügbar\!
+Wähle dabei die Option "Generic SIP Trunk (IP Based"). Achtung - diese ist nur bei hosted Anlagen verfügbar!
 
 ![CleanShot 2025-08-18 at 11.38.01.png](/images/CleanShot2025-08-18at11.38.01.png)
 
 ### Konfiguriere den 3CX Trunk
 
 1. Wähle einen beliebigen Namen
-2. Nutze die Nummer (also die volle Nummer inkl. Nebenstelle) über die Fonio erreichbar sein soll
+2. Füge die Nummer ein über die Fonio **intern** erreichbar sein soll - später wird diese noch mit einem Prefix versehen
 3. Fülle Registrar mit `vojhwtf1hn6.eu.sip.livekit.cloud`
 
 ![CleanShot 2025-08-22 at 10.43.00.png](/images/CleanShot2025-08-22at10.43.00.png)
@@ -27,7 +27,9 @@ Wähle dabei die Option "Generic SIP Trunk (IP Based"). Achtung - diese ist nur 
 
 ### Fonio Nummer Erstellung
 
-Navigiere zu Telefonnummern - Nummer hinzufügen - SIP Nummer erstellen und erstelle die Nummer in Fonio. Nimm hier 1:1 die gleiche Nummer die du oben verwendet hast.
+Navigiere zu Telefonnummern - Nummer hinzufügen - SIP Nummer erstellen und erstelle die Nummer in Fonio. Nimm hier 1:1 die gleiche Nummer die du oben als interne Nummer verwendet hast.
+
+Eventuell kann es sein, dass jemand bereits diese Nummer verwendet hat - in dem Fall wähle bitte eine andere!
 
 <img
   src="/images/CleanShot2025-08-18at11.43.32.png"
@@ -36,12 +38,14 @@ Navigiere zu Telefonnummern - Nummer hinzufügen - SIP Nummer erstellen und erst
   style={{ width:"57%" }}
 />
 
-**Ausgehende Anrufe**
+### Ausgehende Regel
 
-<Info>
-  Coming soon\!
-</Info>
+Erstelle nun eine ausgehende Regel die definiert wann dieser Trunk verwendet werden soll. Du kannst hier beispielsweise 999 nehmen - wichtig ist nur, dass die Ziffern dann wieder weggeschnitten werden
 
-### Anwendung
+![CleanShot 2025-09-18 at 08.55.06.png](/images/CleanShot2025-09-18at08.55.06.png)
 
-Nun kannst du diesen Trunk bei 3CX einstellen und dort verwenden wo du möchtest.
+### Nutzung der Nummer
+
+Nun kannst du diese Nummer beispielsweise bei Abwesenheit einstellen:
+
+![CleanShot 2025-09-18 at 09.02.31.png](/images/CleanShot2025-09-18at09.02.31.png)
