@@ -416,4 +416,78 @@ Die folgenden Vorlagen sollen als Unterstützung für die Erstellung deines Prom
   ```
 </Accordion>
 
+## Handlebars in Fonio Prompts
+
+Mit der **Handlebars-Unterstützung** kannst du deine Prompts flexibler und dynamischer gestalten. Neben einfachen Platzhaltern wie `{{name}}` werden auch **Objektwerte**, **Schleifen** und **Bedingungen** unterstützt. So kannst du Inhalte kontextabhängig anpassen – etwa je nach Anrufer, Anrufrichtung oder CRM-Daten.
+
+<Note>
+  Handlebars macht deine Prompts **dynamisch, wiederverwendbar und kontextsensitiv**. Damit kannst du Logik direkt in deinen Text integrieren – ganz ohne zusätzlichen Code.
+</Note>
+
+---
+
+### 🧩 Zugriff auf Werte in Objekten
+
+Du kannst direkt auf Werte innerhalb von Objekten zugreifen:
+
+```
+Hallo {{contact.firstName}}, ich sehe, Sie rufen von {{company.name}} an.
+
+💡 Use Case: Personalisierte Begrüßung im B2B-Kontext
+Wenn deine KI in einem Unternehmenskontext telefoniert, kannst du über Objektwerte automatisch den Namen des Kontakts und des Unternehmens ausgeben, um die Ansprache persönlicher zu gestalten.
+```
+
+⸻
+
+<b>⚙️ Bedingte Logik</b>
+
+Mit `{{#if}}`, `{{else}}` und `{{/if}}` steuerst du, wie die KI reagiert – z. B. abhängig vom Gesprächskontext:
+
+```
+{{#if hasAppointment}}
+Ich sehe, Sie haben heute bereits einen Termin eingetragen. Möchten Sie ihn verschieben?
+{{else}}
+Ich sehe keinen Termin für heute. Möchten Sie einen neuen vereinbaren?
+{{/if}}
+```
+
+💡 Use Case: Dynamische Gesprächsführung Deine KI kann situationsabhängig reagieren – etwa, wenn der Anrufer schon einen Termin im System hat. Das macht Gespräche natürlicher und effizienter.
+
+⸻
+
+<b>☎️ Helper für eingehende und ausgehende Anrufe</b>
+
+Mit den vordefinierten Variablen isInbound und isOutbound kannst du das Verhalten je nach Anrufrichtung steuern:
+
+```
+{{#if isInbound}}
+Hallo! Hier ist {{assistantName}} von {{company.name}}. Vielen Dank für Ihren Anruf.
+{{else if isOutbound}}
+Guten Tag! Hier ist {{assistantName}} von {{company.name}}. Ich rufe Sie an, weil Sie eine Anfrage gestellt haben.
+{{else}}
+Hallo! Hier ist {{assistantName}} von {{company.name}}.
+{{/if}}
+```
+
+💡 Use Case: Unterschiedliche Gesprächslogik für eingehende und ausgehende Anrufe Bei eingehenden Anrufen kann die KI sich bedanken und das Anliegen aufnehmen, während sie bei ausgehenden Anrufen den Grund des Anrufs erklärt – etwa bei Rückrufen oder Nachfassaktionen.
+
+⸻
+
+<b>🧠 String-Vergleiche</b>
+
+Mit der eq-Funktion kannst du Textwerte vergleichen und so dein Verhalten an unterschiedliche Anruferarten anpassen:
+
+```
+{{#if (eq callerType "customer")}}
+Willkommen zurück! Wie kann ich Ihnen heute helfen?
+{{else if (eq callerType "prospect")}}
+Hallo! Schön, dass Sie anrufen. Geht es um ein neues Angebot?
+{{else}}
+Guten Tag! Wie kann ich Sie unterstützen?
+{{/if}}
+```
+
+💡 Use Case: Unterschiedliche Gesprächseröffnungen Wenn deine KI erkennt, ob der Anrufer ein Bestandskunde, ein Interessent oder jemand Neues ist, kann sie mit der passenden Tonalität und Zielrichtung ins Gespräch starten.
+
+
 Für Fragen oder Unterstützung steht dir unser Team unter [**support@fonio.ai**](mailto:support@fonio.ai) zur Verfügung.
