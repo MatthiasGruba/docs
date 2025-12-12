@@ -1,0 +1,65 @@
+---
+title: "Comdesk/Inopla Rufweiterleitung einrichten"
+description: "Description of your new file."
+---
+
+Dieser Artikel beschreibt Schritt für Schritt, wie eine Rufnummer bei **comdesk / inopla** eingerichtet und per **SIP URI** an [**fonio.ai**](http://fonio.ai) weitergeleitet wird.
+
+## Voraussetzungen
+
+- Aktiver comdesk-/inopla-Account
+- Verfügbare Rufnummer (oder Rufnummernblock)
+- SIP-URI-Ziel von [fonio.ai](http://fonio.ai) (Domain bekannt)
+
+## Schritt 1: Routing-Modul anlegen
+
+1. Melde dich in der comdesk-/inopla-Plattform an
+2. Navigiere zu **„Routings verwalten“**
+3. Lege ein **Routing-Modul** auf eine Rufnummer
+
+![Image(11) Pn](/images/image\(11\).png)
+
+## Schritt 2: Rufnummer auswählen
+
+1. Klicke auf **„Rufnummer einrichten“**
+2. Wähle eine **verfügbare Rufnummer** aus der Liste aus
+3. Bei größeren Rufnummernblöcken:
+   - Lege ggf. zuerst eine **Durchwahl** an
+
+![Image(12) Pn](/images/image\(12\).png)
+
+## Schritt 3: Routing-Modul auswählen
+
+Im nächsten Schritt wird die Rufnummer mit einem Routing-Modul verknüpft:
+
+- **Weiterleitung Easy**\
+  → Empfohlen für einfache, direkte Weiterleitungen
+- **Multidial**\
+  → Erforderlich bei **zeitgesteuerten** oder komplexeren Weiterleitungen
+
+![Image(13) Pn](/images/image\(13\).png)
+
+## Schritt 4: SIP URI eintragen
+
+Im Routing-Modul wird nun die SIP URI von [fonio.ai](http://fonio.ai) hinterlegt.
+
+**Wichtig:**
+
+- Die **Rufnummer muss immer im internationalen Format** angegeben werden\
+  → z. B. `+49…`
+- Die Rufnummer wird als **User** verwendet
+- Die [fonio.ai](http://fonio.ai)-Domain wird als **SIP-Ziel** eingetragen
+
+**Beispiel (schematisch):**
+
+```
+sip:+49XXXXXXXXX@<fonio-domain>
+```
+
+![Image(14) Pn](/images/image\(14\).png)
+
+## Schritt 5: SIP-Header prüfen (wichtig)
+
+In bestimmten Setups kann es notwendig sein, die **übermittelten SIP-Header** anzupassen (z. B. Caller ID / Originator).
+
+👉 In diesen Fällen bitte **kurzfristig den comdesk-/inopla-Support kontaktieren**, damit die Header korrekt konfiguriert werden.
