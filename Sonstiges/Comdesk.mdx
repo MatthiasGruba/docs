@@ -63,3 +63,30 @@ sip:+49XXXXXXXXX@<fonio-domain>
 In bestimmten Setups kann es notwendig sein, die **übermittelten SIP-Header** anzupassen (z. B. Caller ID / Originator).
 
 👉 In diesen Fällen bitte **kurzfristig den comdesk-/inopla-Support kontaktieren**, damit die Header korrekt konfiguriert werden.
+
+## Hinweise zu SIP-Trunk & Nebenstellen
+
+- [fonio.ai](http://fonio.ai) **unterstützt aktuell keine direkte SIP-Trunk-Anbindung**
+- Eine Einwahl von [fonio.ai](http://fonio.ai) auf:
+  - comdesk-Nebenstellen oder
+  - comdesk-SIP-Trunks\
+    ist **nicht möglich**
+- Empfohlene und unterstützte Variante:
+  - **Weiterleitung über SIP URI** oder
+  - Weiterleitung über das öffentliche Telefonnetz
+
+ℹ️ Weiterleitungen per **SIP REFER** haben sich in der Praxis als **nicht zuverlässig funktionierend** erwiesen und werden nicht empfohlen.
+
+---
+
+## Zusammenfassung
+
+- Rufnummer bei comdesk/inopla auswählen
+- Routing-Modul (Easy oder Multidial) zuweisen
+- SIP URI von [fonio.ai](http://fonio.ai) eintragen (immer mit `+49`)
+- Header bei Bedarf anpassen lassen
+- Keine direkte SIP-Trunk-Anbindung verwenden
+
+---
+
+Bei Fragen oder Sonderfällen wende dich bitte direkt an den **comdesk-/inopla-Support** oder an den [**fonio.ai**](http://fonio.ai)**-Support**.
