@@ -32,6 +32,13 @@ Wähle dabei die Option "Generic SIP Trunk (IP Based"). Achtung - diese ist nur 
 
 ![CleanShot 2025-08-18 at 11.41.54.png](/images/CleanShot2025-08-18at11.41.54.png)
 
+### Optional: Sicherstellen, dass die richtige Nummer des Anrufers bei fonio ankommt
+
+Wenn fonio hinter einer 3CX-Telefonanlage verwendet wird, kann es vorkommen, dass dem Assistenten nicht die echte Anrufernummer, sondern die Nummer der 3CX-Anlage übermittelt wird.\
+Um dies zu vermeiden, müssen im **SIP-Trunk** die Felder **„From: Display-Name“** sowie **„Remote-Party-ID“** auf `OriginatorCallerID` gesetzt werden. Diese Einstellung ist in 3CX standardmäßig nicht aktiv und sollte daher manuell angepasst werden.
+
+![Clean Shot2025 12 12at18 34 17@2x Pn](/images/CleanShot2025-12-12at18.34.17@2x.png)
+
 ### Fonio Nummer Erstellung
 
 Navigiere zu Telefonnummern - Nummer hinzufügen - SIP Nummer erstellen und erstelle die Nummer in Fonio. Nimm hier 1:1 die gleiche Nummer die du oben als interne Nummer verwendet hast.
