@@ -34,27 +34,45 @@ Hier findest du eine kompakte Überischt, welche Telefonanlagen sich aktuell mit
 ## Anbieter ohne SIP-Anbindung an fonio:
 
 <Danger>
-  Bei diesen Telefonanlagen ist aktuell leider noch keine Anbindung an fonio möglich, da laut unserem Wissensstand keine statischen SIP-Trunks unterstützt werden.
-  Solltest du eine dieser Anlagen mit fonio verbinden wollen, empfehlen wir den direkten Kontakt zum Hersteller. Statische SIP-Trunks werden unter Umständen erst auf Nachfrage freigeschalten.
+  Bei diesen Telefonanlagen ist aktuell leider noch keine Anbindung an fonio möglich, da laut unserem Wissensstand keine statischen SIP-Trunks unterstützt werden. Solltest du eine dieser Anlagen mit fonio verbinden wollen, empfehlen wir den direkten Kontakt zum Hersteller. Statische SIP-Trunks werden unter Umständen erst auf Nachfrage freigeschalten.
 </Danger>
 
-  <CardGroup cols={2}>
-    <Card title="Fritzbox" href="/SIP-Telefonnummern/Fritzbox">
-      
-    </Card>
-    <Card title="Placetel" href="/SIP-Telefonnummern/Placetel">
-      
-    </Card>
-    <Card title="Peoplefon" href="/SIP-Telefonnummern/Peoplefon">
-      
-    </Card>
-    <Card title="NFON" href="/SIP-Telefonnummern/NFON">
-      
-    </Card>
-    <Card title="Fonial" href="/SIP-Telefonnummern/Fonial">
-      
-    </Card>
-    <Card title="Sipgate" href="/SIP-Telefonnummern/Sipgate">
-      
-    </Card>
-  </CardGroup>
+<CardGroup cols={2}>
+  <Card title="Fritzbox" href="/SIP-Telefonnummern/Fritzbox">
+    
+  </Card>
+  <Card title="Placetel" href="/SIP-Telefonnummern/Placetel">
+    
+  </Card>
+  <Card title="Peoplefon" href="/SIP-Telefonnummern/Peoplefon">
+    
+  </Card>
+  <Card title="NFON" href="/SIP-Telefonnummern/NFON">
+    
+  </Card>
+  <Card title="Fonial" href="/SIP-Telefonnummern/Fonial">
+    
+  </Card>
+  <Card title="Sipgate" href="/SIP-Telefonnummern/Sipgate">
+    
+  </Card>
+</CardGroup>
+
+## Statische SIP IP Ranges
+
+Fonio unterstützt ab sofort **statische SIP IP Ranges** für Inbound- und Outbound-Traffic.
+
+### Verfügbare IP Ranges
+
+- `143.223.88.0/21`
+- `161.115.160.0/19`
+
+### Wann relevant?
+
+Nutze diese IPs, wenn du:
+
+- Firewalls oder SBCs whitelisten musst
+- mit restriktiven Netzwerken arbeitest
+- eine stabile, planbare SIP-Anbindung brauchst
+
+👉 Bitte stelle sicher, dass **UDP/TCP (SIP + RTP)** für diese Ranges erlaubt sind.
