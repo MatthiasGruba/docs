@@ -437,6 +437,17 @@ Hallo {{contact.firstName}}, ich sehe, Sie rufen von {{company.name}} an.
 Wenn deine KI in einem Unternehmenskontext telefoniert, kannst du über Objektwerte automatisch den Namen des Kontakts und des Unternehmens ausgeben, um die Ansprache persönlicher zu gestalten.
 ```
 
+<b>🗃️ Ganze Objekte einbetten</b>
+
+Mit `{{json object}}`, `{{json object.subobjet}}` kannst du ganze Objekte einbetten die dann von uns stringified werden.
+
+```
+Informationen des Kunden:
+{{json customerData}}
+```
+
+💡 Use Case: Dynamische Gesprächsführung Deine KI kann situationsabhängig reagieren – etwa, wenn der Anrufer schon einen Termin im System hat. Das macht Gespräche natürlicher und effizienter.
+
 ⸻
 
 <b>⚙️ Bedingte Logik</b>
@@ -455,7 +466,8 @@ Ich sehe keinen Termin für heute. Möchten Sie einen neuen vereinbaren?
 
 ⸻
 
-<b>☎️ Helper für eingehende und ausgehende Anrufe</b>
+<b>
+☎️ Helper für eingehende und ausgehende Anrufe</b>
 
 Mit den vordefinierten Variablen isInbound und isOutbound kannst du das Verhalten je nach Anrufrichtung steuern:
 
@@ -473,7 +485,8 @@ Hallo! Hier ist {{assistantName}} von {{company.name}}.
 
 ⸻
 
-<b>🧠 String-Vergleiche</b>
+<b>
+🧠 String-Vergleiche</b>
 
 Mit der eq-Funktion kannst du Textwerte vergleichen und so dein Verhalten an unterschiedliche Anruferarten anpassen:
 
@@ -488,6 +501,5 @@ Guten Tag! Wie kann ich Sie unterstützen?
 ```
 
 💡 Use Case: Unterschiedliche Gesprächseröffnungen Wenn deine KI erkennt, ob der Anrufer ein Bestandskunde, ein Interessent oder jemand Neues ist, kann sie mit der passenden Tonalität und Zielrichtung ins Gespräch starten.
-
 
 Für Fragen oder Unterstützung steht dir unser Team unter [**support@fonio.ai**](mailto:support@fonio.ai) zur Verfügung.
