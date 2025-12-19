@@ -60,19 +60,21 @@ Hier findest du eine kompakte Überischt, welche Telefonanlagen sich aktuell mit
 
 ## Statische SIP IP Ranges
 
-Fonio unterstützt ab sofort **statische SIP IP Ranges** für Inbound- und Outbound-Traffic.
+fonio unterstützt ab sofort auch statische SIP IP Ranges. Details dazu findest du hier:
 
-### Verfügbare IP Ranges
+### Verfügbare IP-Ranges
 
 - `143.223.88.0/21`
 - `161.115.160.0/19`
 
-### Wann relevant?
+### Wann ist das relevant?
 
-Nutze diese IPs, wenn du:
+Die statischen IP-Ranges solltest du nutzen, wenn du:
 
-- Firewalls oder SBCs whitelisten musst
-- mit restriktiven Netzwerken arbeitest
-- eine stabile, planbare SIP-Anbindung brauchst
+- SIP-Traffic in **Firewalls oder SBCs whitelisten** musst
+- in **restriktiven oder sicherheitskritischen Netzwerken** arbeitest
+- eine **stabile und vorhersehbare SIP-Anbindung** benötigst
 
-👉 Bitte stelle sicher, dass **UDP/TCP (SIP + RTP)** für diese Ranges erlaubt sind.
+### Wichtiger Hinweis
+
+Stelle sicher, dass für diese IP-Ranges sowohl **UDP als auch TCP** für **SIP-Signalisierung und RTP-Media** freigegeben sind.
